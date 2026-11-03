@@ -6345,6 +6345,60 @@
      "matches": 1
     }
    }
+  },
+  "Universidade do Minho": {
+   "pais": "Portugal",
+   "n_pesquisadores": 227,
+   "ods": {
+    "15": {
+     "pesquisadores": 34,
+     "matches": 59
+    },
+    "13": {
+     "pesquisadores": 11,
+     "matches": 11
+    },
+    "4": {
+     "pesquisadores": 64,
+     "matches": 92
+    },
+    "3": {
+     "pesquisadores": 95,
+     "matches": 107
+    },
+    "12": {
+     "pesquisadores": 7,
+     "matches": 7
+    },
+    "14": {
+     "pesquisadores": 7,
+     "matches": 7
+    },
+    "5": {
+     "pesquisadores": 4,
+     "matches": 4
+    },
+    "6": {
+     "pesquisadores": 14,
+     "matches": 26
+    },
+    "9": {
+     "pesquisadores": 43,
+     "matches": 50
+    },
+    "16": {
+     "pesquisadores": 4,
+     "matches": 7
+    },
+    "11": {
+     "pesquisadores": 5,
+     "matches": 8
+    },
+    "17": {
+     "pesquisadores": 30,
+     "matches": 37
+    }
+   }
   }
  },
  "openalex": {
