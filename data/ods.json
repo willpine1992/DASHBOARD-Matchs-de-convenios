@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-21",
+ "gerado_em": "2026-11-03",
  "metodo": {
   "classificador": "Sentence-BERT all-MiniLM-L6-v2 (cosseno entre linha traduzida p/ EN e descrição do ODS)",
   "min_sim": 0.2,
@@ -5674,56 +5674,6 @@
     }
    }
   },
-  "Freie Universität": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 178,
-   "ods": {
-    "15": {
-     "pesquisadores": 40,
-     "matches": 72
-    },
-    "13": {
-     "pesquisadores": 21,
-     "matches": 22
-    },
-    "14": {
-     "pesquisadores": 13,
-     "matches": 13
-    },
-    "6": {
-     "pesquisadores": 12,
-     "matches": 12
-    },
-    "9": {
-     "pesquisadores": 17,
-     "matches": 18
-    },
-    "3": {
-     "pesquisadores": 91,
-     "matches": 95
-    },
-    "12": {
-     "pesquisadores": 10,
-     "matches": 10
-    },
-    "4": {
-     "pesquisadores": 26,
-     "matches": 34
-    },
-    "5": {
-     "pesquisadores": 4,
-     "matches": 4
-    },
-    "16": {
-     "pesquisadores": 4,
-     "matches": 4
-    },
-    "17": {
-     "pesquisadores": 12,
-     "matches": 13
-    }
-   }
-  },
   "Universidade de Buenos Aires – Faculdade de Medicina": {
    "pais": "Argentina",
    "n_pesquisadores": 107,
@@ -6229,10 +6179,176 @@
      "matches": 3
     }
    }
+  },
+  "Freie Universität": {
+   "pais": "Alemanha",
+   "n_pesquisadores": 179,
+   "ods": {
+    "15": {
+     "pesquisadores": 40,
+     "matches": 72
+    },
+    "13": {
+     "pesquisadores": 21,
+     "matches": 22
+    },
+    "14": {
+     "pesquisadores": 13,
+     "matches": 13
+    },
+    "6": {
+     "pesquisadores": 12,
+     "matches": 12
+    },
+    "9": {
+     "pesquisadores": 17,
+     "matches": 18
+    },
+    "3": {
+     "pesquisadores": 91,
+     "matches": 95
+    },
+    "12": {
+     "pesquisadores": 10,
+     "matches": 10
+    },
+    "4": {
+     "pesquisadores": 27,
+     "matches": 37
+    },
+    "5": {
+     "pesquisadores": 4,
+     "matches": 4
+    },
+    "16": {
+     "pesquisadores": 4,
+     "matches": 4
+    },
+    "17": {
+     "pesquisadores": 12,
+     "matches": 13
+    }
+   }
+  },
+  "Institut de Recherche pour le Développement": {
+   "pais": "França",
+   "n_pesquisadores": 300,
+   "ods": {
+    "15": {
+     "pesquisadores": 108,
+     "matches": 137
+    },
+    "13": {
+     "pesquisadores": 40,
+     "matches": 40
+    },
+    "14": {
+     "pesquisadores": 16,
+     "matches": 16
+    },
+    "9": {
+     "pesquisadores": 12,
+     "matches": 12
+    },
+    "3": {
+     "pesquisadores": 142,
+     "matches": 206
+    },
+    "4": {
+     "pesquisadores": 6,
+     "matches": 7
+    },
+    "17": {
+     "pesquisadores": 8,
+     "matches": 8
+    },
+    "12": {
+     "pesquisadores": 11,
+     "matches": 11
+    },
+    "16": {
+     "pesquisadores": 3,
+     "matches": 3
+    },
+    "11": {
+     "pesquisadores": 1,
+     "matches": 1
+    },
+    "6": {
+     "pesquisadores": 25,
+     "matches": 52
+    }
+   }
+  },
+  "Université de Guyane": {
+   "pais": "Guiana Francesa",
+   "n_pesquisadores": 33,
+   "ods": {
+    "15": {
+     "pesquisadores": 17,
+     "matches": 27
+    },
+    "13": {
+     "pesquisadores": 2,
+     "matches": 2
+    },
+    "3": {
+     "pesquisadores": 27,
+     "matches": 70
+    },
+    "6": {
+     "pesquisadores": 1,
+     "matches": 1
+    },
+    "14": {
+     "pesquisadores": 1,
+     "matches": 1
+    },
+    "12": {
+     "pesquisadores": 2,
+     "matches": 2
+    }
+   }
+  },
+  "Soka University": {
+   "pais": "Japão",
+   "n_pesquisadores": 2,
+   "ods": {
+    "13": {
+     "pesquisadores": 1,
+     "matches": 1
+    },
+    "4": {
+     "pesquisadores": 1,
+     "matches": 1
+    }
+   }
+  },
+  "Breda University of Applied Sciences (BUas)": {
+   "pais": "Holanda",
+   "n_pesquisadores": 2,
+   "ods": {
+    "3": {
+     "pesquisadores": 2,
+     "matches": 2
+    },
+    "9": {
+     "pesquisadores": 1,
+     "matches": 1
+    },
+    "4": {
+     "pesquisadores": 1,
+     "matches": 1
+    },
+    "17": {
+     "pesquisadores": 1,
+     "matches": 1
+    }
+   }
   }
  },
  "openalex": {
-  "gerado_em": "2026-10-01",
+  "gerado_em": "2026-11-03",
   "from_year": 2021,
   "limiar_score_ods": 0.4,
   "instituicoes": {
@@ -7117,6 +7233,32 @@
      "9": 8,
      "6": 6,
      "17": 4
+    }
+   },
+   "Universidade de São José (USJ) - Macau": {
+    "openalex_nome": "University of Saint Joseph",
+    "fonte": "AC0042",
+    "pais": "China",
+    "openalex_id": "I4210108537",
+    "total_trabalhos": 698,
+    "ods": {
+     "3": 159,
+     "4": 95,
+     "9": 52,
+     "10": 41,
+     "16": 39,
+     "11": 38,
+     "8": 31,
+     "14": 25,
+     "13": 18,
+     "12": 12,
+     "2": 12,
+     "17": 11,
+     "5": 10,
+     "15": 8,
+     "6": 7,
+     "7": 7,
+     "1": 4
     }
    }
   }

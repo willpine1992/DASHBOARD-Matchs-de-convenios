@@ -194,7 +194,7 @@ html, body {
 
 .topbar__nav { display: flex; align-items: center; gap: 10px; }
 .topbar__link {
-  font-size: 13px; font-weight: 600; color: var(--ink-secondary);
+  font-size: 13px; white-space: nowrap; font-weight: 600; color: var(--ink-secondary);
   text-decoration: none; padding: 8px 16px; border-radius: var(--radius-pill);
   border: 1px solid transparent; transition: all var(--dur-fast) var(--ease);
 }

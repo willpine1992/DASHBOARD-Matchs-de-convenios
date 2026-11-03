@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-01",
+ "gerado_em": "2026-11-03",
  "from_year": 2021,
  "limiar_score_ods": 0.4,
  "instituicoes": {
@@ -884,6 +884,32 @@
     "9": 8,
     "6": 6,
     "17": 4
+   }
+  },
+  "Universidade de São José (USJ) - Macau": {
+   "openalex_nome": "University of Saint Joseph",
+   "fonte": "AC0042",
+   "pais": "China",
+   "openalex_id": "I4210108537",
+   "total_trabalhos": 698,
+   "ods": {
+    "3": 159,
+    "4": 95,
+    "9": 52,
+    "10": 41,
+    "16": 39,
+    "11": 38,
+    "8": 31,
+    "14": 25,
+    "13": 18,
+    "12": 12,
+    "2": 12,
+    "17": 11,
+    "5": 10,
+    "15": 8,
+    "6": 7,
+    "7": 7,
+    "1": 4
    }
   }
  }
