@@ -416,7 +416,7 @@ function generateProspectingReport({ professores, matches, filters, professorByI
       console.error("generateProspectingReport falhou:", err);
     })
     .finally(() => {
-      if (btn) { btn.disabled = false; btn.textContent = "Gerar Relatório"; }
+      if (btn) { btn.disabled = false; btn.textContent = "Relatório PDF"; }
     });
 }
 
