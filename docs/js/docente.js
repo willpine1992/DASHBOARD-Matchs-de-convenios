@@ -1,5 +1,5 @@
 /* ==========================================================================
-   FAAP Dashboard — Perfil do docente UEA (espelha professor.js, mas para
+   APF Dashboard — Perfil do docente UEA (espelha professor.js, mas para
    o lado UEA: PPG(s) no lugar de instituição conveniada, linhas oficiais do
    PPG no lugar de "linhas em comum", pesquisadores das conveniadas conectados
    via qualquer linha do PPG no lugar de "professores UEA conectados").

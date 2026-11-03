@@ -1,5 +1,5 @@
 /* ==========================================================================
-   FAAP Dashboard — Página 2: Flow Map Manaus → instituições conveniadas
+   APF Dashboard — Página 2: Flow Map Manaus → instituições conveniadas
    ========================================================================== */
 (async function () {
   const data = await loadData();

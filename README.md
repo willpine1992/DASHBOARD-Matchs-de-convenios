@@ -1,4 +1,4 @@
-# FIND A ACADEMIC PARTNER - FAAP · CONVÊNIOS · Matchs com as universidades conveniadas da UEA
+# ACADEMIC PARTNER FOUND - APF · CONVÊNIOS · Matchs com as universidades conveniadas da UEA
 
 Dashboard interativo que cruza os **Programas de Pós-Graduação (PPG)** da
 **Universidade do Estado do Amazonas (UEA)** — e suas linhas de pesquisa

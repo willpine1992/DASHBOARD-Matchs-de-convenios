@@ -1,5 +1,5 @@
 /* ==========================================================================
-   FAAP Dashboard — funções de gráfico (D3): Sankey, mapa, barras
+   APF Dashboard — funções de gráfico (D3): Sankey, mapa, barras
    ========================================================================== */
 
 /* ---------------- Sankey: linha de pesquisa (oficial do PPG) -> instituição conveniada ---------------- */

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   FAAP Dashboard — Página ODS: 17 ODS da ONU × linhas de pesquisa da UEA
+   APF Dashboard — Página ODS: 17 ODS da ONU × linhas de pesquisa da UEA
 
    Dados: ../data/ods.json (gerado por etl/ods_classify.py)
      ods       - [{n, cor, nome, meta, imagem}]

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   FAAP Dashboard — Página 3: Perfil do pesquisador da conveniada
+   APF Dashboard — Página 3: Perfil do pesquisador da conveniada
    ========================================================================== */
 (async function () {
   const { ppgs, linha_matches, institutions, professores, linhaById } = await loadData();

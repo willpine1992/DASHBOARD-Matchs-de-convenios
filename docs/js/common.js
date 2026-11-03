@@ -1,5 +1,5 @@
 /* ==========================================================================
-   FAAP Dashboard — utilidades compartilhadas: dados, paleta, filtros
+   APF Dashboard — utilidades compartilhadas: dados, paleta, filtros
 
    Estrutura de dados (ver etl/export_dashboard_data.py):
      ppgs           - [{codigo, nome, linhas: [{id, titulo, descricao}]}]

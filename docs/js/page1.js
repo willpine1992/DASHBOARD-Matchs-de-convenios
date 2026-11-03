@@ -1,5 +1,5 @@
 /* ==========================================================================
-   FAAP Dashboard — Página 1: orquestração de filtros e gráficos
+   APF Dashboard — Página 1: orquestração de filtros e gráficos
 
    Cascata de filtro: PPG (agrupa todos os professores daquele PPG) -> Linha
    de pesquisa oficial daquele(s) PPG(s). Os matches (linha_matches) já
