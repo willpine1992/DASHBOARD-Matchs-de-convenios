@@ -1,5 +1,5 @@
 /* ==========================================================================
-   FAAP Dashboard — Página 2: Flow Map Manaus → instituições estrangeiras
+   FAAP Dashboard — Página 2: Flow Map Manaus → instituições conveniadas
    ========================================================================== */
 (async function () {
   const data = await loadData();
@@ -11,8 +11,8 @@
   const world = await getWorld();
 
   d3.select("#topbar-stats").html(`
-    <div class="topbar__stat" data-help="Número de instituições estrangeiras (destinos) com coordenadas resolvidas e pelo menos uma conexão com alguma linha de pesquisa de um PPG da UEA."><b>${fmt(institutions.length)}</b><small>Destinos</small></div>
-    <div class="topbar__stat" data-help="Número total de pares (linha de pesquisa do PPG, pesquisador estrangeiro) identificados como possível parceria."><b>${fmt(linha_matches.length)}</b><small>Conexões</small></div>
+    <div class="topbar__stat" data-help="Número de instituições conveniadas (destinos) com coordenadas resolvidas e pelo menos uma conexão com alguma linha de pesquisa de um PPG da UEA."><b>${fmt(institutions.length)}</b><small>Destinos</small></div>
+    <div class="topbar__stat" data-help="Número total de pares (linha de pesquisa do PPG, pesquisador da conveniada) identificados como possível parceria."><b>${fmt(linha_matches.length)}</b><small>Conexões</small></div>
   `);
 
   const maxMatches = d3.max(institutions, (d) => d.n_matches) || 1;
@@ -111,7 +111,7 @@
     arcs
       .on("mousemove", (ev, d) => {
         if (!activeInstitution) highlight(d);
-        showTooltip(ev.clientX, ev.clientY, `<b>${d.instituicao}</b><br>${fmt(d.n_matches)} conexões · ${fmt(d.n_researchers)} pesquisador(es) estrangeiro(s)`);
+        showTooltip(ev.clientX, ev.clientY, `<b>${d.instituicao}</b><br>${fmt(d.n_matches)} conexões · ${fmt(d.n_researchers)} pesquisador(es) da conveniada`);
         ev.stopPropagation();
       })
       .on("mouseleave", () => { if (!activeInstitution) highlight(null); hideTooltip(); })
@@ -120,7 +120,7 @@
     dots
       .on("mousemove", (ev, d) => {
         if (!activeInstitution) highlight(d);
-        showTooltip(ev.clientX, ev.clientY, `<b>${d.instituicao}</b><br>${fmt(d.n_matches)} conexões · ${fmt(d.n_researchers)} pesquisador(es) estrangeiro(s)`);
+        showTooltip(ev.clientX, ev.clientY, `<b>${d.instituicao}</b><br>${fmt(d.n_matches)} conexões · ${fmt(d.n_researchers)} pesquisador(es) da conveniada`);
         ev.stopPropagation();
       })
       .on("mouseleave", () => { if (!activeInstitution) highlight(null); hideTooltip(); })

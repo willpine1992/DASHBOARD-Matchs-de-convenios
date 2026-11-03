@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-21",
+ "gerado_em": "2026-10-21",
  "metodo": {
   "classificador": "Sentence-BERT all-MiniLM-L6-v2 (cosseno entre linha traduzida p/ EN e descrição do ODS)",
   "min_sim": 0.2,
@@ -5522,2177 +5522,7 @@
   }
  },
  "contatos": {
-  "Institute for Biodiversity": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 4,
-   "ods": {
-    "15": {
-     "pesquisadores": 4,
-     "matches": 8
-    }
-   }
-  },
-  "Leibniz University Hannover": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 6,
-   "ods": {
-    "15": {
-     "pesquisadores": 2,
-     "matches": 3
-    },
-    "13": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "4": {
-     "pesquisadores": 1,
-     "matches": 2
-    },
-    "9": {
-     "pesquisadores": 1,
-     "matches": 2
-    },
-    "17": {
-     "pesquisadores": 1,
-     "matches": 2
-    },
-    "11": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "6": {
-     "pesquisadores": 1,
-     "matches": 2
-    }
-   }
-  },
-  "German Centre for Integrative Biodiversity Research": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 6,
-   "ods": {
-    "15": {
-     "pesquisadores": 6,
-     "matches": 9
-    }
-   }
-  },
-  "Max Planck Institute for Biogeochemistry": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 12,
-   "ods": {
-    "15": {
-     "pesquisadores": 12,
-     "matches": 12
-    }
-   }
-  },
-  "Helmholtz Centre for Environmental Research": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 5,
-   "ods": {
-    "15": {
-     "pesquisadores": 5,
-     "matches": 6
-    }
-   }
-  },
-  "University of Göttingen": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 7,
-   "ods": {
-    "15": {
-     "pesquisadores": 5,
-     "matches": 7
-    },
-    "6": {
-     "pesquisadores": 1,
-     "matches": 2
-    },
-    "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "17": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Leipzig University": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "15": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "3": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "University of Bayreuth": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 6,
-   "ods": {
-    "15": {
-     "pesquisadores": 5,
-     "matches": 8
-    },
-    "6": {
-     "pesquisadores": 1,
-     "matches": 2
-    }
-   }
-  },
-  "Eberswalde University for Sustainable Development": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "13": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Friedrich-Alexander-Universität Erlangen-Nürnberg": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "13": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "15": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "6": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Leibniz-Institute for Food Systems Biology at the Technical University of Munich": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 3,
-   "ods": {
-    "13": {
-     "pesquisadores": 3,
-     "matches": 3
-    },
-    "15": {
-     "pesquisadores": 3,
-     "matches": 3
-    }
-   }
-  },
-  "Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR)": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 3,
-   "ods": {
-    "13": {
-     "pesquisadores": 3,
-     "matches": 3
-    },
-    "15": {
-     "pesquisadores": 3,
-     "matches": 3
-    }
-   }
-  },
-  "University of Bremen": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 10,
-   "ods": {
-    "13": {
-     "pesquisadores": 3,
-     "matches": 3
-    },
-    "15": {
-     "pesquisadores": 4,
-     "matches": 4
-    },
-    "3": {
-     "pesquisadores": 5,
-     "matches": 5
-    },
-    "4": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Potsdam Institute for Climate Impact Research": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "13": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "15": {
-     "pesquisadores": 2,
-     "matches": 2
-    }
-   }
-  },
-  "Max Planck Institute for Meteorology": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 4,
-   "ods": {
-    "13": {
-     "pesquisadores": 4,
-     "matches": 5
-    },
-    "15": {
-     "pesquisadores": 3,
-     "matches": 3
-    }
-   }
-  },
-  "German Climate Computing Centre": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "13": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "15": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Alfred-Wegener-Institut Helmholtz-Zentrum für Polar- und Meeresforschung": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 3,
-   "ods": {
-    "13": {
-     "pesquisadores": 3,
-     "matches": 3
-    },
-    "15": {
-     "pesquisadores": 3,
-     "matches": 3
-    },
-    "6": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Deutscher Wetterdienst": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "13": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "15": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Centre for Applied Psychology, Environmental and Social Research": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "13": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "15": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Karlsruhe Institute of Technology": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 8,
-   "ods": {
-    "13": {
-     "pesquisadores": 6,
-     "matches": 6
-    },
-    "15": {
-     "pesquisadores": 8,
-     "matches": 10
-    },
-    "12": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "6": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Helmholtz-Zentrum Hereon": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "13": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "15": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Frankfurt Institute for Advanced Studies": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "13": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "15": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Max Planck Institute of Psychiatry": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "13": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "15": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Fraunhofer Institute for Energy Economics and Energy System Technology": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "13": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "15": {
-     "pesquisadores": 2,
-     "matches": 2
-    }
-   }
-  },
-  "German Institute for Economic Research": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "13": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "15": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Forschungszentrum Jülich": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "13": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "15": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Ludwig-Maximilians-Universität München": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 13,
-   "ods": {
-    "13": {
-     "pesquisadores": 3,
-     "matches": 3
-    },
-    "15": {
-     "pesquisadores": 3,
-     "matches": 3
-    },
-    "4": {
-     "pesquisadores": 8,
-     "matches": 8
-    },
-    "3": {
-     "pesquisadores": 2,
-     "matches": 2
-    }
-   }
-  },
-  "Leibniz Association": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 12,
-   "ods": {
-    "13": {
-     "pesquisadores": 8,
-     "matches": 8
-    },
-    "15": {
-     "pesquisadores": 8,
-     "matches": 8
-    }
-   }
-  },
-  "Leibniz Centre for Agricultural Landscape Research": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "13": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "15": {
-     "pesquisadores": 2,
-     "matches": 2
-    }
-   }
-  },
-  "Universität Hamburg": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 17,
-   "ods": {
-    "13": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "12": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "14": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "4": {
-     "pesquisadores": 6,
-     "matches": 7
-    },
-    "3": {
-     "pesquisadores": 7,
-     "matches": 7
-    },
-    "9": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "15": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "University of Potsdam": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 7,
-   "ods": {
-    "13": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "4": {
-     "pesquisadores": 3,
-     "matches": 3
-    },
-    "6": {
-     "pesquisadores": 2,
-     "matches": 2
-    }
-   }
-  },
-  "Universität Greifswald": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "13": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "4": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "GEOMAR Helmholtz Centre for Ocean Research Kiel": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "13": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "15": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "University of Koblenz and Landau": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 5,
-   "ods": {
-    "13": {
-     "pesquisadores": 3,
-     "matches": 3
-    },
-    "9": {
-     "pesquisadores": 2,
-     "matches": 2
-    }
-   }
-  },
-  "German Council on Foreign Relations": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "13": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Technical University of Munich": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 22,
-   "ods": {
-    "4": {
-     "pesquisadores": 14,
-     "matches": 14
-    },
-    "3": {
-     "pesquisadores": 8,
-     "matches": 8
-    },
-    "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Max Delbrück Center": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "14": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Helmholtz Munich": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 4,
-   "ods": {
-    "9": {
-     "pesquisadores": 4,
-     "matches": 4
-    }
-   }
-  },
-  "TUM Klinikum": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 3,
-   "ods": {
-    "9": {
-     "pesquisadores": 3,
-     "matches": 3
-    }
-   }
-  },
-  "University of Würzburg": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 3,
-   "ods": {
-    "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "3": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "15": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Humboldt-Universität zu Berlin": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 5,
-   "ods": {
-    "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "3": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "15": {
-     "pesquisadores": 1,
-     "matches": 2
-    },
-    "4": {
-     "pesquisadores": 2,
-     "matches": 2
-    }
-   }
-  },
-  "Institut für Psychiatrische Phänomik und Genomik": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "University of Regensburg": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "3": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "European Molecular Biology Laboratory": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 3,
-   "ods": {
-    "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "3": {
-     "pesquisadores": 2,
-     "matches": 2
-    }
-   }
-  },
-  "Bielefeld University": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 3,
-   "ods": {
-    "3": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "4": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "17": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "University of Siegen": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "3": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "4": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Einstein Center Digital Future": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "3": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Charité - Universitätsmedizin Berlin": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 9,
-   "ods": {
-    "3": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "4": {
-     "pesquisadores": 8,
-     "matches": 8
-    }
-   }
-  },
-  "Berliner Hochschule für Technik": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "3": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Universität Trier": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 5,
-   "ods": {
-    "15": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "4": {
-     "pesquisadores": 4,
-     "matches": 4
-    }
-   }
-  },
-  "Essen University Hospital": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "3": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "6": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "University of Duisburg-Essen": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 9,
-   "ods": {
-    "3": {
-     "pesquisadores": 5,
-     "matches": 5
-    },
-    "6": {
-     "pesquisadores": 4,
-     "matches": 4
-    },
-    "15": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "9": {
-     "pesquisadores": 3,
-     "matches": 3
-    },
-    "17": {
-     "pesquisadores": 3,
-     "matches": 3
-    },
-    "4": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Philipps University of Marburg": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "3": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "6": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "LMU Klinikum": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 4,
-   "ods": {
-    "3": {
-     "pesquisadores": 4,
-     "matches": 4
-    }
-   }
-  },
-  "Max Planck Institute for Medical Research": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 3,
-   "ods": {
-    "6": {
-     "pesquisadores": 3,
-     "matches": 3
-    }
-   }
-  },
-  "DWI – Leibniz Institute for Interactive Materials": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 3,
-   "ods": {
-    "6": {
-     "pesquisadores": 3,
-     "matches": 3
-    }
-   }
-  },
-  "Heidelberg University": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 12,
-   "ods": {
-    "6": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "3": {
-     "pesquisadores": 9,
-     "matches": 9
-    },
-    "4": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Städtisches Klinikum Dresden": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "6": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Robert Koch Institute": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 11,
-   "ods": {
-    "3": {
-     "pesquisadores": 11,
-     "matches": 11
-    }
-   }
-  },
-  "German Primate Center": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "3": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "15": {
-     "pesquisadores": 1,
-     "matches": 3
-    }
-   }
-  },
-  "Max Planck Institute for Evolutionary Anthropology": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "3": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Deutsche Lepra- und Tuberkulosehilfe": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 6,
-   "ods": {
-    "3": {
-     "pesquisadores": 6,
-     "matches": 7
-    }
-   }
-  },
-  "Johannes Gutenberg University Mainz": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 5,
-   "ods": {
-    "3": {
-     "pesquisadores": 4,
-     "matches": 4
-    },
-    "4": {
-     "pesquisadores": 1,
-     "matches": 2
-    }
-   }
-  },
-  "Universitätsklinikum Würzburg": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "3": {
-     "pesquisadores": 2,
-     "matches": 2
-    }
-   }
-  },
-  "Jena University Hospital": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 4,
-   "ods": {
-    "3": {
-     "pesquisadores": 3,
-     "matches": 3
-    },
-    "4": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Bundeswehrkrankenhaus": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "3": {
-     "pesquisadores": 2,
-     "matches": 2
-    }
-   }
-  },
-  "SRH Wald-Klinikum Gera": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "3": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "University of Cologne": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 9,
-   "ods": {
-    "3": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "15": {
-     "pesquisadores": 2,
-     "matches": 6
-    },
-    "4": {
-     "pesquisadores": 6,
-     "matches": 7
-    },
-    "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "17": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Hochschule Bonn-Rhein-Sieg": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "3": {
-     "pesquisadores": 2,
-     "matches": 2
-    }
-   }
-  },
-  "Institute for Integrated Management of Material Fluxes and of Resources": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "15": {
-     "pesquisadores": 1,
-     "matches": 2
-    }
-   }
-  },
-  "Osnabrück University": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "15": {
-     "pesquisadores": 1,
-     "matches": 2
-    },
-    "13": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "12": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "14": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "University of Kassel": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "15": {
-     "pesquisadores": 1,
-     "matches": 2
-    },
-    "6": {
-     "pesquisadores": 1,
-     "matches": 2
-    }
-   }
-  },
-  "Deutsche Gesellschaft für Internationale Zusammenarbeit": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "15": {
-     "pesquisadores": 1,
-     "matches": 2
-    }
-   }
-  },
-  "Senckenberg Biodiversity and Climate Research Centre": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 3,
-   "ods": {
-    "15": {
-     "pesquisadores": 3,
-     "matches": 8
-    }
-   }
-  },
-  "Sustainable Europe Research Institute": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "15": {
-     "pesquisadores": 1,
-     "matches": 2
-    },
-    "6": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "15": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "6": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Research Institute for Sustainability at GFZ": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "13": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "12": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "14": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "6": {
-     "pesquisadores": 1,
-     "matches": 2
-    }
-   }
-  },
-  "NewClimate Institute": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 3,
-   "ods": {
-    "13": {
-     "pesquisadores": 3,
-     "matches": 3
-    },
-    "12": {
-     "pesquisadores": 3,
-     "matches": 3
-    },
-    "14": {
-     "pesquisadores": 3,
-     "matches": 3
-    }
-   }
-  },
-  "Climate Analytics": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 3,
-   "ods": {
-    "13": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "12": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "14": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "6": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "University of Freiburg": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 3,
-   "ods": {
-    "13": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "12": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "14": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "15": {
-     "pesquisadores": 2,
-     "matches": 2
-    }
-   }
-  },
-  "University of Vechta": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "4": {
-     "pesquisadores": 2,
-     "matches": 4
-    }
-   }
-  },
-  "Leuphana University of Lüneburg": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 3,
-   "ods": {
-    "4": {
-     "pesquisadores": 1,
-     "matches": 2
-    },
-    "6": {
-     "pesquisadores": 2,
-     "matches": 4
-    }
-   }
-  },
-  "Catholic University of Eichstätt-Ingolstadt": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "4": {
-     "pesquisadores": 1,
-     "matches": 2
-    }
-   }
-  },
-  "Individual Development and Adaptive Education": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "4": {
-     "pesquisadores": 2,
-     "matches": 4
-    }
-   }
-  },
-  "University of Tübingen": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 14,
-   "ods": {
-    "4": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "3": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "9": {
-     "pesquisadores": 11,
-     "matches": 11
-    }
-   }
-  },
-  "Justus-Liebig-Universität Gießen": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "4": {
-     "pesquisadores": 2,
-     "matches": 2
-    }
-   }
-  },
-  "Centre for Tactile Internet with Human-in-the-Loop": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Siemens (Germany)": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Munich Leukemia Laboratory (Germany)": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 8,
-   "ods": {
-    "3": {
-     "pesquisadores": 8,
-     "matches": 8
-    }
-   }
-  },
-  "Universitätsmedizin Göttingen": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "3": {
-     "pesquisadores": 2,
-     "matches": 2
-    }
-   }
-  },
-  "Medizinische Hochschule Hannover": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 12,
-   "ods": {
-    "3": {
-     "pesquisadores": 12,
-     "matches": 12
-    }
-   }
-  },
-  "IMMS Institut für Mikroelektronik- und Mechatronik-Systeme gemeinnützige GmbH (IMMS GmbH)": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "3": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "University of Lübeck": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "3": {
-     "pesquisadores": 2,
-     "matches": 2
-    }
-   }
-  },
-  "Fresenius (Germany)": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 3,
-   "ods": {
-    "3": {
-     "pesquisadores": 3,
-     "matches": 3
-    }
-   }
-  },
-  "Goethe University Frankfurt": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "3": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "University of Münster": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 4,
-   "ods": {
-    "3": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "4": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "17": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "University Hospital Münster": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "3": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "FOM University of Applied Sciences for Economics and Management": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "3": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Sana Klinikum Offenbach": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "3": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Clausthal University of Technology": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "4": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Campus-Institut Data Science (CIDAS)": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "15": {
-     "pesquisadores": 1,
-     "matches": 3
-    }
-   }
-  },
-  "Berlin Center for Genomics in Biodiversity Research": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "15": {
-     "pesquisadores": 1,
-     "matches": 3
-    }
-   }
-  },
-  "Bayer (Germany)": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 4,
-   "ods": {
-    "3": {
-     "pesquisadores": 4,
-     "matches": 4
-    },
-    "15": {
-     "pesquisadores": 2,
-     "matches": 2
-    }
-   }
-  },
-  "Ruhr University Bochum": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 5,
-   "ods": {
-    "15": {
-     "pesquisadores": 4,
-     "matches": 4
-    },
-    "3": {
-     "pesquisadores": 5,
-     "matches": 5
-    }
-   }
-  },
-  "Nuremberg Hospital": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "15": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "3": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "German Cancer Research Center": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 3,
-   "ods": {
-    "15": {
-     "pesquisadores": 3,
-     "matches": 3
-    },
-    "3": {
-     "pesquisadores": 3,
-     "matches": 3
-    }
-   }
-  },
-  "Medical Mission Institute": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "3": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "University of Veterinary Medicine Hannover, Foundation": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "3": {
-     "pesquisadores": 2,
-     "matches": 2
-    }
-   }
-  },
-  "University Hospital Bonn": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 3,
-   "ods": {
-    "3": {
-     "pesquisadores": 3,
-     "matches": 3
-    }
-   }
-  },
-  "Leibniz Institute of Virology (LIV)": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 4,
-   "ods": {
-    "3": {
-     "pesquisadores": 4,
-     "matches": 4
-    }
-   }
-  },
-  "University of Bonn": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "3": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "6": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Hochschule für Musik Freiburg": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "4": {
-     "pesquisadores": 2,
-     "matches": 2
-    }
-   }
-  },
-  "Max Planck Institute for Empirical Aesthetics": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 3,
-   "ods": {
-    "4": {
-     "pesquisadores": 3,
-     "matches": 3
-    }
-   }
-  },
-  "Hanover University of Music Drama and Media": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "4": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "HAW Hamburg": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "4": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "University of Education Schwaebisch Gmuend": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "University of Design Schwäbisch Gmünd": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Karlsruhe University of Education": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Christian-Albrechts-Universität zu Kiel": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 5,
-   "ods": {
-    "9": {
-     "pesquisadores": 5,
-     "matches": 5
-    },
-    "17": {
-     "pesquisadores": 3,
-     "matches": 3
-    }
-   }
-  },
-  "Hochschule für Technik und Wirtschaft Dresden – University of Applied Sciences": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "European University Viadrina": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "17": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Karlshochschule International University": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "17": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "IU International University of Applied Sciences": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "4": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "17": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Ruhr West University of Applied Sciences": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "9": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "4": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "17": {
-     "pesquisadores": 2,
-     "matches": 2
-    }
-   }
-  },
-  "Deutsche Bank (Germany)": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "9": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "4": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "17": {
-     "pesquisadores": 2,
-     "matches": 2
-    }
-   }
-  },
-  "HHL Leipzig Graduate School of Management": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 4,
-   "ods": {
-    "9": {
-     "pesquisadores": 4,
-     "matches": 4
-    },
-    "4": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "17": {
-     "pesquisadores": 4,
-     "matches": 4
-    }
-   }
-  },
-  "Reutlingen University": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "9": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "4": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "17": {
-     "pesquisadores": 2,
-     "matches": 2
-    }
-   }
-  },
-  "Weizenbaum Institute": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 3,
-   "ods": {
-    "9": {
-     "pesquisadores": 3,
-     "matches": 3
-    },
-    "4": {
-     "pesquisadores": 3,
-     "matches": 3
-    },
-    "17": {
-     "pesquisadores": 3,
-     "matches": 3
-    }
-   }
-  },
-  "HTW Berlin - University of Applied Sciences": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "17": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Fraunhofer Institute for Systems and Innovation Research": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 5,
-   "ods": {
-    "9": {
-     "pesquisadores": 5,
-     "matches": 8
-    },
-    "17": {
-     "pesquisadores": 5,
-     "matches": 8
-    },
-    "11": {
-     "pesquisadores": 5,
-     "matches": 5
-    }
-   }
-  },
-  "WHU – Otto Beisheim School of Management": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "9": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "17": {
-     "pesquisadores": 2,
-     "matches": 2
-    }
-   }
-  },
-  "Technische Universität Dresden": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "17": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Centre for European Economic Research": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "17": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "11": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Esslingen University of Applied Sciences": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "4": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Technische Universität Berlin": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 4,
-   "ods": {
-    "6": {
-     "pesquisadores": 4,
-     "matches": 7
-    }
-   }
-  },
-  "United Nations University": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "6": {
-     "pesquisadores": 1,
-     "matches": 2
-    }
-   }
-  },
-  "Institut für Angewandte Gewässerökologie (Germany)": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "6": {
-     "pesquisadores": 1,
-     "matches": 2
-    }
-   }
-  },
-  "Kiel Institute for the World Economy": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "6": {
-     "pesquisadores": 1,
-     "matches": 2
-    }
-   }
-  },
-  "Adelphi Research": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "6": {
-     "pesquisadores": 2,
-     "matches": 4
-    }
-   }
-  },
-  "University of Rostock": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "6": {
-     "pesquisadores": 2,
-     "matches": 4
-    }
-   }
-  },
-  "Johann Heinrich von Thünen-Institut": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "6": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Fraunhofer Institute for Solar Energy Systems": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "6": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "University of Augsburg": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "17": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Evonik (Germany)": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "9": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "17": {
-     "pesquisadores": 2,
-     "matches": 2
-    }
-   }
-  },
-  "Max Planck Institute of Molecular Plant Physiology": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "17": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "University of Konstanz": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "15": {
-     "pesquisadores": 2,
-     "matches": 2
-    }
-   }
-  },
-  "Leibniz Institute of Freshwater Ecology and Inland Fisheries": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "15": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Freie Universität Berlin": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "15": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Carl von Ossietzky Universität Oldenburg": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "15": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Max Planck Institute for Astronomy": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 1,
-   "ods": {
-    "4": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "University of Education Freiburg": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "4": {
-     "pesquisadores": 2,
-     "matches": 2
-    }
-   }
-  },
-  "Leibniz Institute for Science and Mathematics Education": {
-   "pais": "Alemanha",
-   "n_pesquisadores": 2,
-   "ods": {
-    "4": {
-     "pesquisadores": 2,
-     "matches": 2
-    }
-   }
-  },
-  "University of Ghana": {
-   "pais": "Gana",
-   "n_pesquisadores": 66,
-   "ods": {
-    "15": {
-     "pesquisadores": 11,
-     "matches": 17
-    },
-    "13": {
-     "pesquisadores": 5,
-     "matches": 8
-    },
-    "3": {
-     "pesquisadores": 37,
-     "matches": 38
-    },
-    "12": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "14": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "4": {
-     "pesquisadores": 13,
-     "matches": 14
-    },
-    "9": {
-     "pesquisadores": 6,
-     "matches": 6
-    },
-    "17": {
-     "pesquisadores": 6,
-     "matches": 6
-    },
-    "11": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "6": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "University of Algiers Benyoucef Benkhedda": {
-   "pais": "Argélia",
-   "n_pesquisadores": 13,
-   "ods": {
-    "3": {
-     "pesquisadores": 7,
-     "matches": 7
-    },
-    "15": {
-     "pesquisadores": 4,
-     "matches": 5
-    },
-    "6": {
-     "pesquisadores": 1,
-     "matches": 2
-    },
-    "4": {
-     "pesquisadores": 2,
-     "matches": 2
-    }
-   }
-  },
-  "Eduardo Mondlane University": {
-   "pais": "Moçambique",
-   "n_pesquisadores": 44,
-   "ods": {
-    "13": {
-     "pesquisadores": 14,
-     "matches": 17
-    },
-    "15": {
-     "pesquisadores": 19,
-     "matches": 21
-    },
-    "3": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "4": {
-     "pesquisadores": 14,
-     "matches": 14
-    },
-    "9": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "17": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "6": {
-     "pesquisadores": 2,
-     "matches": 6
-    }
-   }
-  },
-  "University of Johannesburg": {
+  "Universidade de Johannesburg": {
    "pais": "África do Sul",
    "n_pesquisadores": 67,
    "ods": {
@@ -7742,7 +5572,7 @@
     }
    }
   },
-  "Stellenbosch University": {
+  "Universidade de Stellenbosch": {
    "pais": "África do Sul",
    "n_pesquisadores": 77,
    "ods": {
@@ -7798,200 +5628,8 @@
     }
    }
   },
-  "University of Birmingham": {
-   "pais": "Reino Unido",
-   "n_pesquisadores": 120,
-   "ods": {
-    "15": {
-     "pesquisadores": 40,
-     "matches": 47
-    },
-    "13": {
-     "pesquisadores": 5,
-     "matches": 6
-    },
-    "4": {
-     "pesquisadores": 16,
-     "matches": 16
-    },
-    "14": {
-     "pesquisadores": 14,
-     "matches": 14
-    },
-    "3": {
-     "pesquisadores": 38,
-     "matches": 40
-    },
-    "12": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "10": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "9": {
-     "pesquisadores": 14,
-     "matches": 14
-    },
-    "17": {
-     "pesquisadores": 12,
-     "matches": 12
-    },
-    "11": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "6": {
-     "pesquisadores": 9,
-     "matches": 15
-    }
-   }
-  },
-  "University of Warwick": {
-   "pais": "Reino Unido",
-   "n_pesquisadores": 67,
-   "ods": {
-    "13": {
-     "pesquisadores": 9,
-     "matches": 9
-    },
-    "15": {
-     "pesquisadores": 15,
-     "matches": 20
-    },
-    "14": {
-     "pesquisadores": 9,
-     "matches": 9
-    },
-    "3": {
-     "pesquisadores": 20,
-     "matches": 20
-    },
-    "6": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "12": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "4": {
-     "pesquisadores": 15,
-     "matches": 19
-    },
-    "9": {
-     "pesquisadores": 13,
-     "matches": 13
-    },
-    "17": {
-     "pesquisadores": 13,
-     "matches": 13
-    }
-   }
-  },
-  "Coventry University": {
-   "pais": "Reino Unido",
-   "n_pesquisadores": 58,
-   "ods": {
-    "15": {
-     "pesquisadores": 14,
-     "matches": 25
-    },
-    "13": {
-     "pesquisadores": 8,
-     "matches": 8
-    },
-    "3": {
-     "pesquisadores": 21,
-     "matches": 21
-    },
-    "6": {
-     "pesquisadores": 8,
-     "matches": 25
-    },
-    "17": {
-     "pesquisadores": 9,
-     "matches": 10
-    },
-    "14": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "4": {
-     "pesquisadores": 4,
-     "matches": 6
-    },
-    "9": {
-     "pesquisadores": 12,
-     "matches": 13
-    },
-    "12": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "10": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "11": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "16": {
-     "pesquisadores": 2,
-     "matches": 2
-    }
-   }
-  },
-  "Imperial College London": {
-   "pais": "Reino Unido",
-   "n_pesquisadores": 209,
-   "ods": {
-    "15": {
-     "pesquisadores": 37,
-     "matches": 56
-    },
-    "13": {
-     "pesquisadores": 14,
-     "matches": 14
-    },
-    "14": {
-     "pesquisadores": 3,
-     "matches": 3
-    },
-    "9": {
-     "pesquisadores": 11,
-     "matches": 11
-    },
-    "3": {
-     "pesquisadores": 141,
-     "matches": 159
-    },
-    "4": {
-     "pesquisadores": 19,
-     "matches": 27
-    },
-    "6": {
-     "pesquisadores": 15,
-     "matches": 28
-    },
-    "5": {
-     "pesquisadores": 4,
-     "matches": 4
-    },
-    "12": {
-     "pesquisadores": 7,
-     "matches": 7
-    },
-    "17": {
-     "pesquisadores": 5,
-     "matches": 5
-    }
-   }
-  },
   "King's College London": {
-   "pais": "Reino Unido",
+   "pais": "Inglaterra",
    "n_pesquisadores": 135,
    "ods": {
     "15": {
@@ -8036,402 +5674,1451 @@
     }
    }
   },
-  "University of Cambridge": {
-   "pais": "Reino Unido",
-   "n_pesquisadores": 200,
+  "Freie Universität": {
+   "pais": "Alemanha",
+   "n_pesquisadores": 178,
    "ods": {
     "15": {
-     "pesquisadores": 69,
-     "matches": 168
+     "pesquisadores": 40,
+     "matches": 72
     },
     "13": {
-     "pesquisadores": 17,
-     "matches": 19
+     "pesquisadores": 21,
+     "matches": 22
     },
     "14": {
-     "pesquisadores": 7,
-     "matches": 7
-    },
-    "9": {
-     "pesquisadores": 26,
-     "matches": 31
+     "pesquisadores": 13,
+     "matches": 13
     },
     "6": {
-     "pesquisadores": 10,
+     "pesquisadores": 12,
      "matches": 12
     },
+    "9": {
+     "pesquisadores": 17,
+     "matches": 18
+    },
     "3": {
-     "pesquisadores": 78,
-     "matches": 85
+     "pesquisadores": 91,
+     "matches": 95
     },
     "12": {
-     "pesquisadores": 28,
-     "matches": 28
+     "pesquisadores": 10,
+     "matches": 10
     },
     "4": {
-     "pesquisadores": 23,
-     "matches": 31
+     "pesquisadores": 26,
+     "matches": 34
     },
     "5": {
      "pesquisadores": 4,
      "matches": 4
+    },
+    "16": {
+     "pesquisadores": 4,
+     "matches": 4
+    },
+    "17": {
+     "pesquisadores": 12,
+     "matches": 13
+    }
+   }
+  },
+  "Universidade de Buenos Aires – Faculdade de Medicina": {
+   "pais": "Argentina",
+   "n_pesquisadores": 107,
+   "ods": {
+    "15": {
+     "pesquisadores": 24,
+     "matches": 47
+    },
+    "13": {
+     "pesquisadores": 19,
+     "matches": 23
+    },
+    "14": {
+     "pesquisadores": 5,
+     "matches": 5
+    },
+    "9": {
+     "pesquisadores": 11,
+     "matches": 14
+    },
+    "3": {
+     "pesquisadores": 58,
+     "matches": 67
+    },
+    "12": {
+     "pesquisadores": 6,
+     "matches": 7
+    },
+    "4": {
+     "pesquisadores": 11,
+     "matches": 12
+    },
+    "5": {
+     "pesquisadores": 1,
+     "matches": 1
     },
     "10": {
      "pesquisadores": 2,
      "matches": 2
     },
-    "16": {
-     "pesquisadores": 3,
-     "matches": 3
-    },
     "17": {
-     "pesquisadores": 16,
-     "matches": 19
-    },
-    "11": {
+     "pesquisadores": 8,
+     "matches": 11
+    }
+   }
+  },
+  "Universidade Nacional Ecológica": {
+   "pais": "Bolívia",
+   "n_pesquisadores": 1,
+   "ods": {
+    "3": {
      "pesquisadores": 1,
      "matches": 1
     }
    }
   },
-  "Queen Mary University of London": {
-   "pais": "Reino Unido",
-   "n_pesquisadores": 103,
+  "Fundação Universidade do Amazonas – FUA": {
+   "pais": "Brasil",
+   "n_pesquisadores": 159,
    "ods": {
     "15": {
-     "pesquisadores": 16,
-     "matches": 26
+     "pesquisadores": 58,
+     "matches": 90
     },
     "13": {
-     "pesquisadores": 4,
-     "matches": 4
+     "pesquisadores": 23,
+     "matches": 25
     },
     "4": {
-     "pesquisadores": 12,
-     "matches": 12
-    },
-    "9": {
-     "pesquisadores": 20,
-     "matches": 21
-    },
-    "3": {
-     "pesquisadores": 54,
-     "matches": 56
-    },
-    "6": {
-     "pesquisadores": 4,
-     "matches": 6
-    },
-    "12": {
-     "pesquisadores": 5,
-     "matches": 5
-    },
-    "14": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "16": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "17": {
-     "pesquisadores": 3,
-     "matches": 4
-    }
-   }
-  },
-  "University of St Andrews": {
-   "pais": "Reino Unido",
-   "n_pesquisadores": 57,
-   "ods": {
-    "15": {
-     "pesquisadores": 17,
-     "matches": 34
-    },
-    "13": {
-     "pesquisadores": 5,
-     "matches": 6
-    },
-    "3": {
-     "pesquisadores": 25,
-     "matches": 29
-    },
-    "6": {
-     "pesquisadores": 4,
-     "matches": 6
-    },
-    "17": {
-     "pesquisadores": 5,
-     "matches": 5
-    },
-    "14": {
-     "pesquisadores": 3,
-     "matches": 3
-    },
-    "4": {
-     "pesquisadores": 4,
-     "matches": 4
-    },
-    "5": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "12": {
-     "pesquisadores": 6,
-     "matches": 6
-    },
-    "16": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "9": {
-     "pesquisadores": 5,
-     "matches": 5
-    }
-   }
-  },
-  "National University of Singapore": {
-   "pais": "Singapura",
-   "n_pesquisadores": 68,
-   "ods": {
-    "15": {
-     "pesquisadores": 8,
-     "matches": 8
-    },
-    "13": {
-     "pesquisadores": 8,
-     "matches": 8
-    },
-    "14": {
-     "pesquisadores": 3,
-     "matches": 3
-    },
-    "9": {
-     "pesquisadores": 13,
-     "matches": 13
-    },
-    "3": {
-     "pesquisadores": 27,
+     "pesquisadores": 22,
      "matches": 30
     },
-    "4": {
-     "pesquisadores": 9,
-     "matches": 10
-    },
-    "6": {
-     "pesquisadores": 9,
-     "matches": 9
-    },
-    "12": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "5": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Nanyang Technological University": {
-   "pais": "Singapura",
-   "n_pesquisadores": 49,
-   "ods": {
-    "15": {
-     "pesquisadores": 18,
-     "matches": 19
-    },
-    "13": {
-     "pesquisadores": 17,
-     "matches": 18
-    },
-    "14": {
-     "pesquisadores": 6,
-     "matches": 6
-    },
-    "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
     "3": {
-     "pesquisadores": 10,
-     "matches": 10
-    },
-    "4": {
-     "pesquisadores": 12,
-     "matches": 14
-    },
-    "6": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "12": {
-     "pesquisadores": 3,
-     "matches": 3
+     "pesquisadores": 84,
+     "matches": 101
     },
     "5": {
-     "pesquisadores": 5,
-     "matches": 5
-    }
-   }
-  },
-  "Singapore Management University": {
-   "pais": "Singapura",
-   "n_pesquisadores": 20,
-   "ods": {
-    "15": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
-    "13": {
-     "pesquisadores": 9,
-     "matches": 9
-    },
-    "4": {
      "pesquisadores": 7,
      "matches": 7
     },
-    "6": {
+    "14": {
      "pesquisadores": 1,
      "matches": 1
     },
     "12": {
+     "pesquisadores": 7,
+     "matches": 7
+    },
+    "10": {
+     "pesquisadores": 5,
+     "matches": 5
+    },
+    "9": {
+     "pesquisadores": 10,
+     "matches": 11
+    },
+    "17": {
+     "pesquisadores": 10,
+     "matches": 11
+    },
+    "11": {
+     "pesquisadores": 4,
+     "matches": 4
+    }
+   }
+  },
+  "Instituto de Tecnologia da Aeronáutica": {
+   "pais": "Brasil",
+   "n_pesquisadores": 27,
+   "ods": {
+    "13": {
+     "pesquisadores": 7,
+     "matches": 7
+    },
+    "15": {
+     "pesquisadores": 12,
+     "matches": 24
+    },
+    "4": {
+     "pesquisadores": 4,
+     "matches": 4
+    },
+    "3": {
+     "pesquisadores": 4,
+     "matches": 4
+    },
+    "9": {
+     "pesquisadores": 8,
+     "matches": 20
+    },
+    "17": {
+     "pesquisadores": 8,
+     "matches": 20
+    },
+    "6": {
      "pesquisadores": 3,
      "matches": 3
+    }
+   }
+  },
+  "Zafu University": {
+   "pais": "China",
+   "n_pesquisadores": 34,
+   "ods": {
+    "15": {
+     "pesquisadores": 25,
+     "matches": 33
+    },
+    "13": {
+     "pesquisadores": 13,
+     "matches": 13
+    },
+    "12": {
+     "pesquisadores": 2,
+     "matches": 2
+    },
+    "14": {
+     "pesquisadores": 2,
+     "matches": 2
+    },
+    "3": {
+     "pesquisadores": 4,
+     "matches": 4
+    },
+    "9": {
+     "pesquisadores": 3,
+     "matches": 3
+    },
+    "17": {
+     "pesquisadores": 3,
+     "matches": 3
+    },
+    "11": {
+     "pesquisadores": 2,
+     "matches": 2
+    }
+   }
+  },
+  "Universidade de Pamplona": {
+   "pais": "Colômbia",
+   "n_pesquisadores": 20,
+   "ods": {
+    "3": {
+     "pesquisadores": 11,
+     "matches": 11
+    },
+    "4": {
+     "pesquisadores": 7,
+     "matches": 8
+    },
+    "15": {
+     "pesquisadores": 2,
+     "matches": 3
+    },
+    "14": {
+     "pesquisadores": 1,
+     "matches": 1
+    },
+    "12": {
+     "pesquisadores": 1,
+     "matches": 1
+    },
+    "9": {
+     "pesquisadores": 1,
+     "matches": 1
+    },
+    "17": {
+     "pesquisadores": 1,
+     "matches": 1
+    }
+   }
+  },
+  "Universidade de El Salvador": {
+   "pais": "El Salvador",
+   "n_pesquisadores": 9,
+   "ods": {
+    "3": {
+     "pesquisadores": 7,
+     "matches": 7
+    },
+    "13": {
+     "pesquisadores": 1,
+     "matches": 1
+    },
+    "12": {
+     "pesquisadores": 1,
+     "matches": 1
+    },
+    "14": {
+     "pesquisadores": 1,
+     "matches": 1
+    },
+    "4": {
+     "pesquisadores": 1,
+     "matches": 1
+    }
+   }
+  },
+  "Universidad de Salamanca – USAL": {
+   "pais": "Espanha",
+   "n_pesquisadores": 105,
+   "ods": {
+    "15": {
+     "pesquisadores": 12,
+     "matches": 13
+    },
+    "13": {
+     "pesquisadores": 2,
+     "matches": 2
+    },
+    "3": {
+     "pesquisadores": 54,
+     "matches": 69
+    },
+    "6": {
+     "pesquisadores": 4,
+     "matches": 9
+    },
+    "4": {
+     "pesquisadores": 15,
+     "matches": 19
+    },
+    "9": {
+     "pesquisadores": 17,
+     "matches": 17
+    },
+    "14": {
+     "pesquisadores": 8,
+     "matches": 8
+    },
+    "16": {
+     "pesquisadores": 2,
+     "matches": 2
+    },
+    "17": {
+     "pesquisadores": 8,
+     "matches": 8
+    }
+   }
+  },
+  "Instituto Nacional de Pesquisa do Genoma Humano – NHGRI": {
+   "pais": "Estados Unidos",
+   "n_pesquisadores": 38,
+   "ods": {
+    "9": {
+     "pesquisadores": 4,
+     "matches": 4
+    },
+    "3": {
+     "pesquisadores": 16,
+     "matches": 17
+    },
+    "6": {
+     "pesquisadores": 3,
+     "matches": 3
+    },
+    "15": {
+     "pesquisadores": 2,
+     "matches": 3
+    },
+    "13": {
+     "pesquisadores": 2,
+     "matches": 2
+    },
+    "12": {
+     "pesquisadores": 2,
+     "matches": 2
+    },
+    "14": {
+     "pesquisadores": 3,
+     "matches": 3
+    },
+    "17": {
+     "pesquisadores": 1,
+     "matches": 1
+    },
+    "4": {
+     "pesquisadores": 14,
+     "matches": 14
+    }
+   }
+  },
+  "Universidad Nacional de Colombia": {
+   "pais": "Colômbia",
+   "n_pesquisadores": 181,
+   "ods": {
+    "15": {
+     "pesquisadores": 57,
+     "matches": 74
+    },
+    "13": {
+     "pesquisadores": 26,
+     "matches": 27
+    },
+    "3": {
+     "pesquisadores": 77,
+     "matches": 90
+    },
+    "4": {
+     "pesquisadores": 23,
+     "matches": 23
+    },
+    "12": {
+     "pesquisadores": 11,
+     "matches": 11
     },
     "14": {
      "pesquisadores": 3,
      "matches": 3
     },
     "5": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "9": {
      "pesquisadores": 2,
      "matches": 2
-    }
-   }
-  },
-  "Singapore University of Technology and Design": {
-   "pais": "Singapura",
-   "n_pesquisadores": 3,
-   "ods": {
-    "4": {
-     "pesquisadores": 2,
-     "matches": 3
     },
-    "5": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "15": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Singapore Institute of Technology": {
-   "pais": "Singapura",
-   "n_pesquisadores": 10,
-   "ods": {
-    "13": {
-     "pesquisadores": 8,
-     "matches": 8
-    },
-    "15": {
-     "pesquisadores": 8,
-     "matches": 8
-    },
-    "4": {
-     "pesquisadores": 1,
-     "matches": 1
-    },
-    "5": {
-     "pesquisadores": 1,
-     "matches": 1
+    "6": {
+     "pesquisadores": 9,
+     "matches": 9
     },
     "9": {
-     "pesquisadores": 1,
-     "matches": 1
-    }
-   }
-  },
-  "Singapore University of Social Sciences": {
-   "pais": "Singapura",
-   "n_pesquisadores": 12,
-   "ods": {
-    "15": {
-     "pesquisadores": 4,
-     "matches": 4
+     "pesquisadores": 15,
+     "matches": 15
     },
-    "13": {
-     "pesquisadores": 1,
-     "matches": 1
+    "16": {
+     "pesquisadores": 3,
+     "matches": 5
     },
-    "3": {
+    "11": {
      "pesquisadores": 3,
      "matches": 3
     },
-    "6": {
-     "pesquisadores": 1,
-     "matches": 1
+    "17": {
+     "pesquisadores": 12,
+     "matches": 12
+    }
+   }
+  },
+  "Instituto Tecnológico da Califórnia – CALTECH": {
+   "pais": "Estados Unidos",
+   "n_pesquisadores": 61,
+   "ods": {
+    "15": {
+     "pesquisadores": 33,
+     "matches": 46
     },
-    "4": {
-     "pesquisadores": 4,
-     "matches": 5
+    "13": {
+     "pesquisadores": 14,
+     "matches": 16
     },
-    "5": {
-     "pesquisadores": 1,
-     "matches": 1
+    "14": {
+     "pesquisadores": 3,
+     "matches": 3
     },
     "9": {
+     "pesquisadores": 9,
+     "matches": 10
+    },
+    "10": {
+     "pesquisadores": 4,
+     "matches": 4
+    },
+    "12": {
+     "pesquisadores": 2,
+     "matches": 2
+    },
+    "3": {
+     "pesquisadores": 11,
+     "matches": 11
+    },
+    "17": {
+     "pesquisadores": 3,
+     "matches": 4
+    },
+    "4": {
      "pesquisadores": 1,
      "matches": 1
     }
    }
   },
-  "LASALLE College of the Arts": {
-   "pais": "Singapura",
-   "n_pesquisadores": 3,
+  "Universidade de Michigan": {
+   "pais": "Estados Unidos",
+   "n_pesquisadores": 281,
    "ods": {
-    "4": {
-     "pesquisadores": 2,
-     "matches": 2
-    },
     "15": {
-     "pesquisadores": 1,
-     "matches": 2
+     "pesquisadores": 53,
+     "matches": 74
+    },
+    "13": {
+     "pesquisadores": 20,
+     "matches": 22
+    },
+    "4": {
+     "pesquisadores": 46,
+     "matches": 56
+    },
+    "14": {
+     "pesquisadores": 10,
+     "matches": 10
+    },
+    "9": {
+     "pesquisadores": 40,
+     "matches": 43
+    },
+    "3": {
+     "pesquisadores": 142,
+     "matches": 158
     },
     "6": {
+     "pesquisadores": 12,
+     "matches": 16
+    },
+    "12": {
+     "pesquisadores": 8,
+     "matches": 8
+    },
+    "5": {
+     "pesquisadores": 6,
+     "matches": 6
+    },
+    "10": {
      "pesquisadores": 1,
      "matches": 1
+    },
+    "16": {
+     "pesquisadores": 3,
+     "matches": 4
+    },
+    "11": {
+     "pesquisadores": 5,
+     "matches": 6
+    },
+    "17": {
+     "pesquisadores": 21,
+     "matches": 24
+    }
+   }
+  },
+  "Clermont Auvergne Institut National Polytechnique (INP)": {
+   "pais": "França",
+   "n_pesquisadores": 7,
+   "ods": {
+    "13": {
+     "pesquisadores": 1,
+     "matches": 1
+    },
+    "15": {
+     "pesquisadores": 3,
+     "matches": 3
     },
     "12": {
      "pesquisadores": 1,
      "matches": 1
-    }
-   }
-  },
-  "Nanyang Academy of Fine Arts": {
-   "pais": "Singapura",
-   "n_pesquisadores": 1,
-   "ods": {
+    },
     "3": {
      "pesquisadores": 1,
      "matches": 1
-    }
-   }
-  },
-  "James Cook University Singapore": {
-   "pais": "Singapura",
-   "n_pesquisadores": 1,
-   "ods": {
-    "13": {
-     "pesquisadores": 1,
-     "matches": 1
+    },
+    "9": {
+     "pesquisadores": 3,
+     "matches": 3
+    },
+    "17": {
+     "pesquisadores": 3,
+     "matches": 3
     }
    }
   }
  },
- "openalex": null
+ "openalex": {
+  "gerado_em": "2026-10-01",
+  "from_year": 2021,
+  "limiar_score_ods": 0.4,
+  "instituicoes": {
+   "Universidade de Johannesburg": {
+    "openalex_nome": "University of Johannesburg",
+    "fonte": "AC0001",
+    "pais": "África do Sul",
+    "openalex_id": "I24027795",
+    "total_trabalhos": 37783,
+    "ods": {
+     "7": 2047,
+     "9": 2028,
+     "8": 1818,
+     "3": 1545,
+     "10": 1525,
+     "4": 1502,
+     "6": 1323,
+     "2": 1160,
+     "16": 1153,
+     "5": 1026,
+     "14": 878,
+     "12": 789,
+     "17": 762,
+     "11": 760,
+     "13": 744,
+     "15": 743,
+     "1": 639
+    }
+   },
+   "Universidade de Stellenbosch": {
+    "openalex_nome": "Stellenbosch University",
+    "fonte": "AC0002",
+    "pais": "África do Sul",
+    "openalex_id": "I26092322",
+    "total_trabalhos": 29322,
+    "ods": {
+     "3": 4125,
+     "2": 1445,
+     "15": 1300,
+     "4": 1073,
+     "10": 1033,
+     "5": 1007,
+     "1": 927,
+     "14": 881,
+     "7": 805,
+     "16": 732,
+     "17": 617,
+     "9": 605,
+     "13": 592,
+     "6": 492,
+     "8": 427,
+     "11": 410,
+     "12": 306
+    }
+   },
+   "Freie Universität": {
+    "openalex_nome": "Freie Universität Berlin",
+    "fonte": "AC0003",
+    "pais": "Alemanha",
+    "openalex_id": "I75951250",
+    "total_trabalhos": 39162,
+    "ods": {
+     "3": 4949,
+     "10": 1772,
+     "15": 1436,
+     "14": 1418,
+     "2": 1331,
+     "4": 1301,
+     "16": 1224,
+     "13": 1059,
+     "6": 796,
+     "7": 780,
+     "5": 758,
+     "11": 596,
+     "8": 562,
+     "17": 445,
+     "9": 430,
+     "1": 316,
+     "12": 211
+    }
+   },
+   "Universidade Katyavala Bwila": {
+    "openalex_nome": "Universidade Katyavala Bwila",
+    "fonte": "AC0004",
+    "pais": "Angola",
+    "openalex_id": "I4210120595",
+    "total_trabalhos": 114,
+    "ods": {
+     "3": 21,
+     "4": 14,
+     "8": 7,
+     "2": 6,
+     "7": 5,
+     "10": 3,
+     "16": 3,
+     "9": 2,
+     "11": 1,
+     "13": 1,
+     "17": 1,
+     "5": 1
+    }
+   },
+   "Universidade de Buenos Aires – Faculdade de Medicina": {
+    "openalex_nome": "Universidad de Buenos Aires",
+    "fonte": "AC0006",
+    "pais": "Argentina",
+    "openalex_id": "I24354313",
+    "total_trabalhos": 38679,
+    "ods": {
+     "3": 3417,
+     "10": 2101,
+     "4": 1994,
+     "14": 1755,
+     "16": 1747,
+     "2": 1633,
+     "5": 1345,
+     "15": 1172,
+     "11": 953,
+     "13": 727,
+     "7": 697,
+     "8": 662,
+     "6": 626,
+     "17": 317,
+     "1": 302,
+     "9": 280,
+     "12": 265
+    }
+   },
+   "Universidade Nacional Ecológica": {
+    "openalex_nome": "Universidad Nacional Ecologica",
+    "fonte": "AC0007",
+    "pais": "Bolívia",
+    "openalex_id": "I4405267954",
+    "total_trabalhos": 77,
+    "ods": {
+     "3": 27,
+     "17": 2,
+     "4": 2,
+     "15": 1,
+     "2": 1,
+     "5": 1
+    }
+   },
+   "Fundação Universidade do Amazonas – FUA": {
+    "openalex_nome": "Universidade Federal do Amazonas",
+    "fonte": "AC0008",
+    "pais": "Brasil",
+    "openalex_id": "I62885914",
+    "total_trabalhos": 16558,
+    "ods": {
+     "3": 1740,
+     "4": 1686,
+     "15": 827,
+     "2": 720,
+     "16": 482,
+     "14": 453,
+     "10": 427,
+     "5": 408,
+     "9": 318,
+     "11": 304,
+     "7": 237,
+     "8": 218,
+     "6": 209,
+     "13": 193,
+     "12": 186,
+     "1": 123,
+     "17": 84
+    }
+   },
+   "Instituto de Tecnologia da Aeronáutica": {
+    "openalex_nome": "Instituto Tecnológico de Aeronáutica",
+    "fonte": "AC0009",
+    "pais": "Brasil",
+    "openalex_id": "I107428990",
+    "total_trabalhos": 4291,
+    "ods": {
+     "7": 672,
+     "9": 261,
+     "13": 143,
+     "16": 121,
+     "11": 116,
+     "6": 96,
+     "4": 59,
+     "12": 58,
+     "14": 55,
+     "3": 55,
+     "2": 42,
+     "15": 38,
+     "17": 38,
+     "8": 38,
+     "10": 35,
+     "5": 9,
+     "1": 7
+    }
+   },
+   "Zafu University": {
+    "openalex_nome": "Zhejiang A & F University",
+    "fonte": "AC0011",
+    "pais": "China",
+    "openalex_id": "I1284762954",
+    "total_trabalhos": 12327,
+    "ods": {
+     "2": 1836,
+     "15": 1550,
+     "6": 633,
+     "11": 448,
+     "7": 445,
+     "3": 399,
+     "13": 364,
+     "12": 342,
+     "9": 248,
+     "14": 231,
+     "10": 110,
+     "8": 89,
+     "16": 65,
+     "1": 43,
+     "4": 43,
+     "5": 35,
+     "17": 34
+    }
+   },
+   "Universidad Nacional de Colombia": {
+    "openalex_nome": "Universidad Nacional de Colombia",
+    "fonte": "AC0013",
+    "pais": "Colômbia",
+    "openalex_id": "I36243813",
+    "total_trabalhos": 25340,
+    "ods": {
+     "3": 2164,
+     "15": 1390,
+     "2": 1058,
+     "7": 916,
+     "14": 849,
+     "4": 789,
+     "10": 750,
+     "6": 647,
+     "16": 640,
+     "11": 638,
+     "9": 478,
+     "13": 472,
+     "12": 389,
+     "8": 389,
+     "5": 378,
+     "1": 214,
+     "17": 196
+    }
+   },
+   "Universidade de Pamplona": {
+    "openalex_nome": "University of Pamplona",
+    "fonte": "AC0014",
+    "pais": "Colômbia",
+    "openalex_id": "I86843133",
+    "total_trabalhos": 2213,
+    "ods": {
+     "4": 254,
+     "3": 166,
+     "10": 92,
+     "2": 91,
+     "7": 86,
+     "8": 62,
+     "15": 61,
+     "9": 49,
+     "16": 45,
+     "14": 35,
+     "11": 34,
+     "5": 32,
+     "6": 29,
+     "12": 22,
+     "1": 16,
+     "13": 13,
+     "17": 12
+    }
+   },
+   "Universidade de El Salvador": {
+    "openalex_nome": "University of El Salvador",
+    "fonte": "AC0016",
+    "pais": "El Salvador",
+    "openalex_id": "I51361536",
+    "total_trabalhos": 995,
+    "ods": {
+     "3": 101,
+     "4": 79,
+     "2": 47,
+     "14": 42,
+     "15": 42,
+     "10": 31,
+     "16": 27,
+     "13": 24,
+     "5": 21,
+     "17": 19,
+     "8": 19,
+     "1": 18,
+     "11": 18,
+     "6": 18,
+     "7": 17,
+     "9": 10,
+     "12": 7
+    }
+   },
+   "Universidad de Salamanca – USAL": {
+    "openalex_nome": "Universidad de Salamanca",
+    "fonte": "AC0017",
+    "pais": "Espanha",
+    "openalex_id": "I184999862",
+    "total_trabalhos": 22363,
+    "ods": {
+     "3": 2414,
+     "4": 1982,
+     "10": 1082,
+     "16": 962,
+     "2": 767,
+     "5": 713,
+     "7": 594,
+     "14": 559,
+     "11": 537,
+     "15": 472,
+     "9": 377,
+     "8": 361,
+     "13": 305,
+     "17": 253,
+     "6": 225,
+     "1": 207,
+     "12": 160
+    }
+   },
+   "Instituto Nacional de Pesquisa do Genoma Humano – NHGRI": {
+    "openalex_nome": "National Human Genome Research Institute",
+    "fonte": "AC0018",
+    "pais": "Estados Unidos",
+    "openalex_id": "I4210090236",
+    "total_trabalhos": 3137,
+    "ods": {
+     "3": 955,
+     "2": 207,
+     "17": 101,
+     "4": 78,
+     "5": 78,
+     "10": 76,
+     "14": 75,
+     "15": 73,
+     "1": 44,
+     "16": 40,
+     "9": 31,
+     "13": 10,
+     "6": 10,
+     "11": 9,
+     "7": 7,
+     "12": 4,
+     "8": 4
+    }
+   },
+   "Instituto Tecnológico da Califórnia – CALTECH": {
+    "openalex_nome": "California Institute of Technology",
+    "fonte": "AC0019",
+    "pais": "Estados Unidos",
+    "openalex_id": "I122411786",
+    "total_trabalhos": 39914,
+    "ods": {
+     "7": 3168,
+     "14": 2631,
+     "13": 1700,
+     "11": 899,
+     "15": 885,
+     "3": 752,
+     "6": 744,
+     "16": 681,
+     "9": 670,
+     "10": 500,
+     "2": 449,
+     "4": 282,
+     "17": 280,
+     "12": 191,
+     "8": 145,
+     "5": 95,
+     "1": 78
+    }
+   },
+   "Universidade de Michigan": {
+    "openalex_nome": "University of Michigan",
+    "fonte": "AC0020",
+    "pais": "Estados Unidos",
+    "openalex_id": "I27837315",
+    "total_trabalhos": 576315,
+    "ods": {
+     "7": 66529,
+     "3": 26249,
+     "2": 5926,
+     "4": 4790,
+     "5": 4320,
+     "16": 3863,
+     "10": 3784,
+     "1": 2550,
+     "13": 2442,
+     "14": 2307,
+     "15": 2143,
+     "9": 1904,
+     "17": 1836,
+     "11": 1805,
+     "8": 1642,
+     "6": 1414,
+     "12": 548
+    }
+   },
+   "École d'Ingénieurs Généralistes – La Rochelle (EIGSI)": {
+    "openalex_nome": "Ecole d'ingénieurs en génie des systèmes industriels",
+    "fonte": "AC0021",
+    "pais": "França",
+    "openalex_id": "I4210130549",
+    "total_trabalhos": 101,
+    "ods": {
+     "7": 13,
+     "11": 9,
+     "9": 6,
+     "14": 5,
+     "16": 5,
+     "12": 3,
+     "10": 2,
+     "13": 2,
+     "4": 2,
+     "8": 2,
+     "3": 1
+    }
+   },
+   "Clermont Auvergne Institut National Polytechnique (INP)": {
+    "openalex_nome": "Clermont Auvergne INP",
+    "fonte": "AC0022",
+    "pais": "França",
+    "openalex_id": "I4387154249",
+    "total_trabalhos": 2032,
+    "ods": {
+     "3": 142,
+     "7": 128,
+     "6": 122,
+     "2": 93,
+     "11": 87,
+     "12": 56,
+     "9": 53,
+     "15": 49,
+     "14": 46,
+     "13": 38,
+     "16": 35,
+     "10": 30,
+     "8": 25,
+     "5": 22,
+     "4": 12,
+     "1": 10,
+     "17": 9
+    }
+   },
+   "Institut de Recherche pour le Développement": {
+    "openalex_nome": "Institut de Recherche pour le Développement",
+    "fonte": "AC0023",
+    "pais": "França",
+    "openalex_id": "I4210166444",
+    "total_trabalhos": 53499,
+    "ods": {
+     "14": 10933,
+     "15": 5034,
+     "3": 3537,
+     "13": 3474,
+     "2": 2748,
+     "6": 1476,
+     "11": 1187,
+     "10": 676,
+     "5": 459,
+     "12": 367,
+     "7": 315,
+     "17": 308,
+     "1": 303,
+     "16": 298,
+     "9": 298,
+     "4": 253,
+     "8": 219
+    }
+   },
+   "Université de Guyane": {
+    "openalex_nome": "University of French Guiana",
+    "fonte": "AC0024",
+    "pais": "Guiana Francesa",
+    "openalex_id": "I2800447973",
+    "total_trabalhos": 1032,
+    "ods": {
+     "3": 127,
+     "15": 95,
+     "14": 68,
+     "10": 54,
+     "2": 52,
+     "13": 27,
+     "7": 26,
+     "1": 24,
+     "16": 21,
+     "5": 20,
+     "4": 15,
+     "6": 15,
+     "8": 15,
+     "11": 10,
+     "17": 10,
+     "12": 4,
+     "9": 2
+    }
+   },
+   "Soka University": {
+    "openalex_nome": "Soka University",
+    "fonte": "AC0025",
+    "pais": "Japão",
+    "openalex_id": "I4210088637",
+    "total_trabalhos": 1061,
+    "ods": {
+     "14": 67,
+     "4": 67,
+     "6": 64,
+     "8": 48,
+     "10": 47,
+     "7": 43,
+     "2": 42,
+     "16": 29,
+     "3": 27,
+     "15": 22,
+     "12": 20,
+     "17": 20,
+     "9": 20,
+     "5": 15,
+     "13": 13,
+     "11": 11,
+     "1": 9
+    }
+   },
+   "Breda University of Applied Sciences (BUas)": {
+    "openalex_nome": "Breda University of Applied Sciences",
+    "fonte": "AC0026",
+    "pais": "Holanda",
+    "openalex_id": "I128589980",
+    "total_trabalhos": 464,
+    "ods": {
+     "8": 100,
+     "11": 39,
+     "10": 30,
+     "4": 17,
+     "9": 16,
+     "5": 13,
+     "2": 9,
+     "16": 7,
+     "3": 7,
+     "13": 6,
+     "14": 5,
+     "12": 4,
+     "17": 3,
+     "15": 1,
+     "7": 1
+    }
+   },
+   "King's College London": {
+    "openalex_nome": "King's College London",
+    "fonte": "AC0027",
+    "pais": "Inglaterra",
+    "openalex_id": "I183935753",
+    "total_trabalhos": 88447,
+    "ods": {
+     "3": 18500,
+     "10": 3649,
+     "2": 3639,
+     "16": 3195,
+     "4": 3140,
+     "5": 3035,
+     "1": 2284,
+     "17": 1959,
+     "8": 1297,
+     "9": 1108,
+     "7": 1106,
+     "13": 983,
+     "11": 800,
+     "15": 761,
+     "14": 578,
+     "6": 432,
+     "12": 267
+    }
+   },
+   "Afeka Tel Aviv Academic College of Engineering": {
+    "openalex_nome": "Afeka College of Engineering",
+    "fonte": "AC0028",
+    "pais": "Israel",
+    "openalex_id": "I119096390",
+    "total_trabalhos": 500,
+    "ods": {
+     "3": 36,
+     "7": 34,
+     "4": 28,
+     "9": 26,
+     "10": 24,
+     "16": 18,
+     "11": 17,
+     "8": 11,
+     "13": 10,
+     "17": 6,
+     "2": 6,
+     "1": 3,
+     "5": 3,
+     "15": 2,
+     "12": 1,
+     "14": 1,
+     "6": 1
+    }
+   },
+   "Universidade do Minho": {
+    "openalex_nome": "University of Minho",
+    "fonte": "AC0029",
+    "pais": "Portugal",
+    "openalex_id": "I99682543",
+    "total_trabalhos": 24823,
+    "ods": {
+     "3": 2077,
+     "4": 1401,
+     "9": 1301,
+     "11": 1207,
+     "2": 883,
+     "7": 829,
+     "16": 778,
+     "10": 716,
+     "12": 650,
+     "8": 590,
+     "5": 551,
+     "6": 495,
+     "15": 473,
+     "14": 434,
+     "13": 416,
+     "17": 378,
+     "1": 174
+    }
+   },
+   "Università “G. d’Annunzio” Chieti-Pescara": {
+    "openalex_nome": "University of Chieti-Pescara",
+    "fonte": "AC0030",
+    "pais": "Itália",
+    "openalex_id": "I39387349",
+    "total_trabalhos": 13573,
+    "ods": {
+     "3": 3457,
+     "2": 639,
+     "11": 482,
+     "10": 408,
+     "4": 370,
+     "5": 361,
+     "14": 292,
+     "16": 273,
+     "8": 232,
+     "6": 228,
+     "13": 218,
+     "9": 209,
+     "15": 174,
+     "7": 166,
+     "1": 160,
+     "12": 151,
+     "17": 129
+    }
+   },
+   "Universidade de Coimbra": {
+    "openalex_nome": "University of Coimbra",
+    "fonte": "AC0032",
+    "pais": "Portugal",
+    "openalex_id": "I76903346",
+    "total_trabalhos": 33359,
+    "ods": {
+     "3": 3386,
+     "4": 1431,
+     "2": 1305,
+     "10": 1209,
+     "7": 1161,
+     "16": 1160,
+     "14": 1084,
+     "11": 1044,
+     "5": 890,
+     "15": 881,
+     "9": 839,
+     "6": 782,
+     "13": 632,
+     "8": 619,
+     "12": 542,
+     "17": 427,
+     "1": 242
+    }
+   },
+   "Universidade do Porto": {
+    "openalex_nome": "Universidade do Porto",
+    "fonte": "AC0033",
+    "pais": "Portugal",
+    "openalex_id": "I182534213",
+    "total_trabalhos": 56420,
+    "ods": {
+     "3": 7953,
+     "2": 2880,
+     "14": 2683,
+     "4": 2137,
+     "15": 1711,
+     "7": 1673,
+     "11": 1532,
+     "9": 1498,
+     "10": 1346,
+     "6": 1234,
+     "5": 1224,
+     "16": 1189,
+     "12": 1000,
+     "13": 864,
+     "17": 741,
+     "8": 682,
+     "1": 495
+    }
+   },
+   "Universidade Fernando Pessoa": {
+    "openalex_nome": "Fernando Pessoa University",
+    "fonte": "AC0034",
+    "pais": "Portugal",
+    "openalex_id": "I157071867",
+    "total_trabalhos": 2269,
+    "ods": {
+     "3": 388,
+     "4": 166,
+     "2": 118,
+     "5": 92,
+     "16": 89,
+     "10": 69,
+     "14": 55,
+     "9": 49,
+     "11": 48,
+     "8": 42,
+     "12": 38,
+     "13": 38,
+     "17": 32,
+     "1": 30,
+     "6": 25,
+     "15": 24,
+     "7": 17
+    }
+   },
+   "Universidade de Aveiro": {
+    "openalex_nome": "University of Aveiro",
+    "fonte": "AC0035",
+    "pais": "Portugal",
+    "openalex_id": "I60858718",
+    "total_trabalhos": 25473,
+    "ods": {
+     "14": 1557,
+     "3": 1417,
+     "7": 1403,
+     "4": 1177,
+     "9": 1079,
+     "6": 910,
+     "2": 850,
+     "15": 761,
+     "8": 722,
+     "12": 711,
+     "11": 687,
+     "10": 581,
+     "13": 453,
+     "16": 373,
+     "17": 284,
+     "5": 271,
+     "1": 97
+    }
+   },
+   "Escola Superior de Enfermagem do Porto": {
+    "openalex_nome": "Escola Superior de Enfermagem da Universidade do Porto",
+    "fonte": "AC0036",
+    "pais": "Portugal",
+    "openalex_id": "I4210123501",
+    "total_trabalhos": 943,
+    "ods": {
+     "3": 134,
+     "4": 123,
+     "10": 29,
+     "5": 24,
+     "16": 20,
+     "8": 11,
+     "1": 8,
+     "17": 7,
+     "2": 7,
+     "9": 7,
+     "13": 5,
+     "11": 1,
+     "12": 1,
+     "15": 1,
+     "7": 1
+    }
+   },
+   "Instituto Politécnico de Castelo Branco": {
+    "openalex_nome": "Polytechnic Institute of Castelo Branco",
+    "fonte": "AC0037",
+    "pais": "Portugal",
+    "openalex_id": "I144926016",
+    "total_trabalhos": 1325,
+    "ods": {
+     "3": 119,
+     "4": 108,
+     "2": 67,
+     "9": 54,
+     "15": 51,
+     "10": 47,
+     "11": 46,
+     "16": 44,
+     "12": 33,
+     "8": 33,
+     "13": 26,
+     "14": 26,
+     "7": 21,
+     "5": 17,
+     "17": 10,
+     "6": 5,
+     "1": 4
+    }
+   },
+   "Instituto Politécnico de Coimbra": {
+    "openalex_nome": "Polytechnic Institute of Coimbra",
+    "fonte": "AC0038",
+    "pais": "Portugal",
+    "openalex_id": "I293362453",
+    "total_trabalhos": 3653,
+    "ods": {
+     "3": 291,
+     "4": 230,
+     "2": 207,
+     "7": 156,
+     "9": 148,
+     "8": 134,
+     "11": 106,
+     "15": 97,
+     "12": 96,
+     "16": 82,
+     "10": 75,
+     "5": 75,
+     "14": 64,
+     "6": 62,
+     "17": 59,
+     "13": 50,
+     "1": 25
+    }
+   },
+   "Faculdade de Ciências Sociais e Humanas da Universidade Nova de Lisboa": {
+    "openalex_nome": "Universidade Nova de Lisboa",
+    "fonte": "AC0039",
+    "pais": "Portugal",
+    "openalex_id": "I83558840",
+    "total_trabalhos": 27060,
+    "ods": {
+     "3": 3066,
+     "2": 1267,
+     "4": 1034,
+     "7": 958,
+     "10": 889,
+     "16": 829,
+     "9": 814,
+     "11": 786,
+     "14": 722,
+     "6": 667,
+     "15": 629,
+     "12": 585,
+     "5": 537,
+     "13": 498,
+     "17": 471,
+     "8": 446,
+     "1": 268
+    }
+   },
+   "Universidade da Amazônia Peruana": {
+    "openalex_nome": "Universidad Nacional de la Amazonía Peruana",
+    "fonte": "AC0040",
+    "pais": "Peru",
+    "openalex_id": "I3130743028",
+    "total_trabalhos": 873,
+    "ods": {
+     "15": 109,
+     "3": 92,
+     "4": 62,
+     "14": 54,
+     "2": 47,
+     "10": 23,
+     "1": 15,
+     "11": 11,
+     "5": 11,
+     "8": 11,
+     "12": 10,
+     "13": 10,
+     "16": 9,
+     "9": 8,
+     "6": 6,
+     "17": 4
+    }
+   }
+  }
+ }
 }

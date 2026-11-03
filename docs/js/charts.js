@@ -2,14 +2,14 @@
    FAAP Dashboard — funções de gráfico (D3): Sankey, mapa, barras
    ========================================================================== */
 
-/* ---------------- Sankey: linha de pesquisa (oficial do PPG) -> instituição estrangeira ---------------- */
+/* ---------------- Sankey: linha de pesquisa (oficial do PPG) -> instituição conveniada ---------------- */
 const OTHER_INSTITUTIONS_LABEL = "Outras instituições";
 const OTHER_LINHAS_LABEL = "Outras linhas de pesquisa";
 
 const SANKEY_COLUMN_ORDER = ["linha", "instituicao"];
 const SANKEY_COLUMN_DEFS = {
   linha: { label: "Linha de pesquisa", key: (m) => m.linha_titulo },
-  instituicao: { label: "Instituição estrangeira", key: (m) => m.foreign_institution },
+  instituicao: { label: "Instituição conveniada", key: (m) => m.foreign_institution },
 };
 
 function buildSankeyGraph(matchSubset, opts) {
@@ -206,7 +206,7 @@ function renderSankey(el, matchSubset, ppgColorInfo, opts = {}) {
 
 function truncateLabel(s, n) { return s.length > n ? s.slice(0, n - 1) + "…" : s; }
 
-/* ---------------- Mapa: países estrangeiros com match ---------------- */
+/* ---------------- Mapa: países das conveniadas com match ---------------- */
 const _worldCache = {};
 async function getWorld(detail = "110m") {
   if (!_worldCache[detail]) {
@@ -318,8 +318,13 @@ async function renderCountryMap(el, matchSubset) {
 
 function normalizeCountry(name) {
   const map = {
-    Germany: "Alemanha", Ghana: "Gana", Angola: "Angola", Algeria: "Argélia",
-    Mozambique: "Moçambique", "South Africa": "África do Sul", "United Kingdom": "Reino Unido", Singapore: "Singapura",
+    // países das conveniadas (nomes em português iguais aos do painel DASHBOARD CONVENIOS UEA)
+    "South Africa": "África do Sul", Germany: "Alemanha", Angola: "Angola", Argentina: "Argentina",
+    Bolivia: "Bolívia", Brazil: "Brasil", Canada: "Canadá", China: "China", Colombia: "Colômbia",
+    Cuba: "Cuba", "El Salvador": "El Salvador", Spain: "Espanha", "United States of America": "Estados Unidos",
+    France: "França", Japan: "Japão", Netherlands: "Holanda", "United Kingdom": "Inglaterra",
+    Israel: "Israel", Italy: "Itália", Mozambique: "Moçambique", Peru: "Peru", Portugal: "Portugal",
+    "Dominican Rep.": "República Dominicana", "Dominican Republic": "República Dominicana",
   };
   return map[name] || name;
 }

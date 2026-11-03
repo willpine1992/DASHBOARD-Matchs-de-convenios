@@ -7,7 +7,7 @@
    mesmo conjunto de parcerias vale para todos os professores do PPG/linha.
    ========================================================================== */
 (async function () {
-  const { ppgs, professores, linha_matches, institutions, manaus, professorById, linhaById, capesByCode, capesOpcoes } = await loadData();
+  const { ppgs, professores, linha_matches, institutions, convenios, manaus, professorById, linhaById, capesByCode, capesOpcoes } = await loadData();
   // classificação das linhas da UEA em ODS (etl/ods_classify.py); se faltar, o painel de ODS só some
   const odsData = await fetch("../data/ods.json", { cache: "no-cache" }).then((r) => r.json()).catch(() => null);
 
@@ -56,8 +56,8 @@
   d3.select("#topbar-stats").html(`
     <div class="topbar__stat" data-help="Número de Programas de Pós-Graduação da UEA na base."><b>${fmt(ppgs.length)}</b><small>PPGs</small></div>
     <div class="topbar__stat" data-help="Número de docentes da UEA na base, agrupados por PPG."><b>${fmt(professores.length)}</b><small>Docentes UEA</small></div>
-    <div class="topbar__stat" data-help="Número de instituições estrangeiras distintas com pelo menos um pesquisador com linha de pesquisa semelhante a alguma linha oficial de um PPG da UEA."><b>${fmt(institutions.length)}</b><small>Instituições estrangeiras</small></div>
-    <div class="topbar__stat" data-help="Número total de pares (linha de pesquisa do PPG, pesquisador estrangeiro) identificados como possível parceria, considerando os filtros ativos."><b>${fmt(linha_matches.length)}</b><small>Conexões</small></div>
+    <div class="topbar__stat" data-help="Instituições conveniadas com pelo menos um pesquisador com linha de pesquisa semelhante a alguma linha oficial de um PPG da UEA, do total de acordos do painel de convênios (as demais não têm perfil no OpenAlex ou ainda não tiveram match)."><b>${fmt(institutions.length)}</b><small>Conveniadas com match (de ${fmt(convenios.length)})</small></div>
+    <div class="topbar__stat" data-help="Número total de pares (linha de pesquisa do PPG, pesquisador da conveniada) identificados como possível parceria, considerando os filtros ativos."><b>${fmt(linha_matches.length)}</b><small>Conexões</small></div>
   `);
 
   /* ---- eventos ---- */
@@ -172,7 +172,7 @@
     d3.select("#prof-count-hint").text(`${fmt(currentFilteredProfessores.length)} / ${fmt(professores.length)}`);
   }
 
-  /* ---- painel ODS: pesquisadores estrangeiros distintos por ODS (via linha da UEA → ODS) ---- */
+  /* ---- painel ODS: pesquisadores das conveniadas distintos por ODS (via linha da UEA → ODS) ---- */
   function renderOdsPanel(matchesForCharts, linhaIdsAtuais) {
     const panel = document.getElementById("ods-panel");
     if (!odsData) { panel.style.display = "none"; return; }
@@ -199,7 +199,7 @@
     const grid = document.getElementById("ods-mini-grid");
     grid.innerHTML = odsData.ods.map((o) => {
       const n = porOds.get(o.n).size;
-      const tip = `ODS ${o.n} · ${o.nome} — ${n} pesquisador${n === 1 ? "" : "es"} estrangeiro${n === 1 ? "" : "s"}`;
+      const tip = `ODS ${o.n} · ${o.nome} — ${n} pesquisador${n === 1 ? "" : "es"} da${n === 1 ? "" : "s"} conveniada${n === 1 ? "" : "s"}`;
       return `<button type="button" class="ods-tile${n ? "" : " is-empty"}" title="${tip}" aria-label="${tip}"
           onclick="location.href='ods.html?ods=${o.n}${qs}'">
           <img src="${o.imagem}" alt="ODS ${o.n}" loading="lazy" /><span class="ods-tile__count">${fmt(n)}</span></button>`;
@@ -251,7 +251,7 @@
       scoreEl.style.color = "";
       fillEl.style.width = "0%";
       hintEl.textContent = "";
-      pairEl.innerHTML = "Passe o mouse sobre uma conexão entre <b>Linha de pesquisa</b> e <b>Instituição estrangeira</b>.";
+      pairEl.innerHTML = "Passe o mouse sobre uma conexão entre <b>Linha de pesquisa</b> e <b>Instituição conveniada</b>.";
       return;
     }
 

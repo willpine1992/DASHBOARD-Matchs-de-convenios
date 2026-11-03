@@ -1,146 +1,98 @@
-# FIND A ACADEMIC PARTNER - FAAP · Parcerias Internacionais UEA (PPG × Universidades Estrangeiras)
+# FIND A ACADEMIC PARTNER - FAAP · CONVÊNIOS · Matchs com as universidades conveniadas da UEA
 
 Dashboard interativo que cruza os **Programas de Pós-Graduação (PPG)** da
 **Universidade do Estado do Amazonas (UEA)** — e suas linhas de pesquisa
-**oficiais** (nome + descrição, mantidas pela PROPESP/ARI) — com potenciais
-parceiros de pesquisa no exterior. O critério de cruzamento é semântico
-(Sentence-BERT): o texto da linha de pesquisa de cada PPG é comparado com
-publicações de pesquisadores estrangeiros indexadas no OpenAlex, não mais com
-o histórico de publicações de um professor isolado. O cruzamento é genérico
-por país/universidade (coluna `foreign_country`), então múltiplas fontes
-convivem na mesma base sem conflito — hoje: Alemanha (país inteiro), Gana,
-Argélia, Moçambique, África do Sul (Johannesburg + Stellenbosch), Angola, 8
-universidades do Reino Unido e 11 instituições de Singapura (cobertura parcial —
-enriquecimento OpenAlex em andamento, ver `WEBSCRAPING/SINGAPRA/README.txt`).
+**oficiais** (nome + descrição, mantidas pela PROPESP/ARI) — com pesquisadores
+das **instituições que já têm acordo vigente com a UEA**.
 
-**🔗 Site publicado:** https://willpine1992.github.io/DASHBOARD-PROSPECC-AO-PPGxUNI.ESTR/
-**🔗 Site publicado (conta de Internacionalização):** https://internacionalizacao-create.github.io/DASHBOARD-PROSPECC-AO-PPGxUNI.ESTR-/
+É uma cópia do painel de prospecção
+([DASHBOARD PROSPECÇAO PPGxUNI.ESTR](https://github.com/willpine1992/DASHBOARD-PROSPECC-AO-PPGxUNI.ESTR))
+com **exatamente a mesma metodologia** (linha de pesquisa × publicações OpenAlex,
+rerank semântico Sentence-BERT). Só muda a lista de alvos: em vez de países/
+universidades escolhidos para prospecção, os alvos são **todos os acordos do
+painel de convênios** (`DASHBOARD/DASHBOARD CONVENIOS UEA`), inclusive as
+instituições brasileiras, tratadas igual às estrangeiras.
+
+**🔗 Repositórios (push duplo pelo mesmo `origin`):**
+- https://github.com/willpine1992/DASHBOARD-Matchs-de-convenios
+- https://github.com/internacionalizacao-create/DASHBOARD-Matchs-de-convenios
 
 ## O que tem no dashboard
 
 | Página | Conteúdo |
 |---|---|
-| **Painel** (`docs/index.html`) | Filtro em cascata **PPG → Linha de pesquisa** (selecionar um PPG agrupa todos os seus docentes e mostra só as linhas oficiais dele), gráfico Sankey linha de pesquisa × instituição estrangeira, mapa do país estrangeiro e ranking de pesquisadores estrangeiros. Cada docente aparece com o ícone de ORCID (quando cadastrado), que leva direto ao perfil público dele |
-| **Mapa de Fluxo** (`docs/flowmap.html`) | Globo 3D arrastável/zoom com arcos de Manaus até cada instituição estrangeira; clicar num arco mostra as linhas de pesquisa e os docentes dos PPGs envolvidos, e permite abrir o perfil de qualquer um deles |
-| **ODS** (`docs/ods.html`) | Os 17 Objetivos de Desenvolvimento Sustentável da ONU em ordem (logo `ods.png` ao lado do ODS 17). Cada uma das 166 linhas de pesquisa da UEA é classificada em até 3 ODS por Sentence-BERT (offline, `etl/ods_classify.py` → `data/ods.json`). Clicar num ODS mostra as linhas da UEA associadas e as universidades com pesquisadores de match forte nelas; o quadro universidade × ODS tem 3 métricas (contatos, participação % e índice de especialização — as duas últimas dependem do OpenAlex, `etl/ods_openalex.py`, ainda pendente por falta de créditos). Estratégia completa em `PROJETOS DASHBOARDS/ODS/estrategia.txt` |
-| **Perfil do pesquisador estrangeiro** (`docs/professor.html`) | Ao clicar num pesquisador estrangeiro: dados pessoais, linhas de pesquisa em comum, docentes UEA conectados, dados da instituição (com mini-mapa e info ao vivo via OpenAlex) e lista de publicações reais (ORCID) |
-| **Perfil do docente UEA** (`docs/docente.html`) | Ao clicar num docente UEA: PPG(s), linhas de pesquisa oficiais do(s) PPG(s), pesquisadores estrangeiros conectados a elas, mini-mapa da UEA, links/ícones de ORCID, OpenAlex e Currículo Lattes (quando cadastrados na planilha) e publicações reais via ORCID |
+| **Painel** (`docs/index.html`) | Filtro em cascata **PPG → Linha de pesquisa**, Sankey linha de pesquisa × instituição conveniada, mapa dos países das conveniadas, ranking de pesquisadores das conveniadas e quadro de ODS. O indicador "Conveniadas com match (de N)" compara com o total de acordos do painel de convênios |
+| **Mapa de Fluxo** (`docs/flowmap.html`) | Globo 3D com arcos de Manaus até cada conveniada com match |
+| **ODS** (`docs/ods.html`) | Os 17 ODS × linhas de pesquisa da UEA × conveniadas. Reflete só os matches das conveniadas; o bloco OpenAlex (participação % e índice de especialização por universidade) está preenchido para as conveniadas (`etl/ods_openalex.py`) |
+| **Perfil do pesquisador** (`docs/professor.html`) | Pesquisador da conveniada: linhas em comum, docentes UEA conectados, instituição (com **tipo e vigência do convênio**, mini-mapa e dados OpenAlex buscados pelo ID exato) e publicações (ORCID) |
+| **Perfil do docente UEA** (`docs/docente.html`) | PPG(s), linhas oficiais, pesquisadores das conveniadas conectados, links ORCID/OpenAlex/Lattes |
 
-Todo o site é **estático** (HTML/CSS/JS + um único JSON de dados, sem
-backend) e roda inteiramente no navegador — publicado via GitHub Pages a
-partir deste repositório.
+Site **estático** (HTML/CSS/JS + JSON), publicado via GitHub Pages.
 
-## Estrutura do repositório
+## De onde vêm as conveniadas
 
 ```
-DASHBOARD PROSPECÇAO PPGxUNI.ESTR/
-├── docs/                     # o dashboard publicado (GitHub Pages)
-│   ├── index.html            # Página 1 — Painel
-│   ├── flowmap.html          # Página 2 — Mapa de Fluxo
-│   ├── professor.html        # Página 3 — Perfil do pesquisador estrangeiro
-│   ├── docente.html          # Página 4 — Perfil do docente UEA
-│   ├── css/style.css
-│   ├── js/                   # common.js, charts.js, page1.js, flowmap.js, professor.js, docente.js, report.js
-│   └── lib/                  # D3, d3-sankey, topojson (vendorizados, sem CDN)
-│
-├── data/
-│   ├── dashboard.json        # ⭐ fonte única de dados do site:
-│   │                          #    { ppgs, professores, linha_matches, institutions, manaus }
-│   └── capes_notas.json      # conceito CAPES por PPG (Avaliação Quadrienal 2021-2024)
-│
-├── etl/                       # pipeline Python que gera data/dashboard.json
-│   ├── linha_match.py         # match linha de pesquisa oficial × pesquisadores estrangeiros
-│   │                          #    (Alemanha + Gana + Argélia + Moçambique + África do Sul ×2 +
-│   │                          #    Angola + Reino Unido ×8), via OpenAlex + rerank semântico
-│   │                          #    (MATCHING/rerank.py)
-│   ├── geocode.py             # geocoding via Nominatim (cache local, usado nas instituições estrangeiras)
-│   ├── export_dashboard_data.py  # gera data/dashboard.json (ppgs + professores + linha_matches)
-│   └── export_csv.py           # exporta as tabelas em CSV (separador `|`) — legado
-│
-├── cache/                     # cache local de OpenAlex/Nominatim/matching (gitignored)
-├── output/                    # linha_matches.json (gitignored)
-└── index.html                 # redireciona a raiz do site para docs/index.html
+DASHBOARD CONVENIOS UEA/data/dashboard.json   (campo "acordos" — fonte única dos convênios)
+        │
+        ▼
+etl/convenios.py  +  etl/convenios_openalex.json (mapeamento curado instituição -> ID OpenAlex)
+        │
+        ├──> etl/linha_match.py         FONTES = um alvo por acordo (id = id do acordo, ex. AC0001)
+        ├──> etl/export_dashboard_data.py  coordenadas e dados do acordo; lista "convenios" completa
+        └──> etl/ods_openalex.py        métricas ODS por conveniada
 ```
 
-A base canônica de PPGs/linhas de pesquisa (nome + descrição oficial) e a
-lista de docentes por PPG (com ORCID e ID Lattes) vivem fora deste repositório, em
-`DATA BASE UEA/PPGS_LINHAS/` (pasta irmã) — ver o README de lá para como são
-geradas a partir da planilha da UEA.
-
-> `lattes_parser.py`, `db.py`, `run_etl.py`, `openalex_enrich.py` e
-> `germany_match.py` (aquisição OpenAlex por keyword de professor) ficaram no
-> histórico do repositório mas **não são mais usados** para montar
-> `data/dashboard.json` — a lista de docentes por PPG deixou de vir de
-> currículos Lattes e passou a vir inteiramente da planilha, ORCID e ID Lattes
-> incluídos (ver Fases G e H do README de `DATA BASE UEA/PPGS_LINHAS/`).
-
-> `cache/` e `output/` **não são versionados** (dados intermediários de
-> matching, não pessoais). Só `data/dashboard.json` vai para o repositório
-> público.
+- `convenios_openalex.json` tem `status: ok` (entra no matching) ou
+  `sem_openalex` (sem perfil acadêmico no OpenAlex: ISCED Sumbe, VanWest
+  College, Inst. Tecnológico do Putumayo, Geocuba, Univ. Licungo, Embaixada da
+  Rep. Dominicana). Essas aparecem só na lista `convenios` do JSON, com
+  `n_matches = 0`.
+- Subunidades sem ID próprio no OpenAlex usam a instituição-mãe (UBA –
+  Faculdade de Medicina → UBA; NOVA FCSH → Universidade NOVA de Lisboa). O NHGRI
+  tem ID próprio e é usado direto. FUA → UFAM.
+- **Convênio novo no painel de convênios** sem entrada no mapeamento faz o ETL
+  falhar listando o que falta — adicione a entrada (buscando o ID em
+  `https://api.openalex.org/institutions?search=...`) e rode de novo.
+- Nos matches, `foreign_institution` é o **nome do convênio** (igual ao painel
+  de convênios), e `foreign_institution_openalex` guarda o nome do OpenAlex;
+  `convenio_id` liga cada match ao acordo.
 
 ## Como atualizar os dados
 
 ```bash
-cd "DATA BASE UEA/PPGS_LINHAS/etl"
-python3 build_ppgs_linhas.py           # linhas de pesquisa oficiais (aba "PPGs")
-python3 build_docentes.py              # docentes por PPG + ORCID + ID Lattes (aba "PPGxDocente")
-
-cd "../../../DASHBOARD/DASHBOARD PROSPECÇAO PPGxUNI.ESTR"
-python3 etl/linha_match.py             # cruza as linhas de pesquisa oficiais dos PPGs x estrangeiros
-python3 etl/export_dashboard_data.py   # gera data/dashboard.json (ppgs + professores + matches)
+cd "DASHBOARD/DASHBOARD Matchs de convenios"
+python3 etl/linha_match.py                       # todos os convênios (usa o cache; só busca o que falta)
+python3 etl/linha_match.py --fontes AC0042 --merge  # só um convênio novo, preservando os demais
+python3 etl/export_dashboard_data.py             # data/dashboard.json
+python3 etl/ods_openalex.py                      # data/ods_openalex.json (≈3 chamadas por conveniada)
+../../MATCHING/.venv/bin/python etl/ods_classify.py   # data/ods.json
 ```
 
-`linha_match.py` depende de `MATCHING/` (Sentence-BERT) e `PADRONIZAÇAO/`
-(tradução PT→EN offline via Argos Translate) — pastas irmãs deste
-repositório, cada uma com seu próprio `.venv`. Reexecuções são rápidas graças
-ao cache local (`cache/`) — só bate na internet para termos de busca novos.
+Cache de aquisição OpenAlex: convênios que já eram alvos da prospecção
+reaproveitam o cache de lá (`WEBSCRAPING/<país>/...`); os demais ficam em
+`WEBSCRAPING/CONVENIOS UEA/cache/<ID OpenAlex>_match_cache.json`. Um 429
+(cota OpenAlex) interrompe sem gravar resultado vazio no cache — é só rodar de
+novo com `--merge`.
 
-Depois é só commitar e dar push: o GitHub Pages republica sozinho em ~1
-minuto.
+Depois: `git commit` e `git push` (o `origin` empurra para os dois repositórios).
 
 ## Como rodar localmente
 
-O dashboard precisa ser servido por HTTP (não abrir o `.html` direto, por
-causa do CORS no `fetch` do JSON) e servido a partir da **raiz** deste
-repositório, porque `docs/js/common.js` busca os dados em
-`../data/dashboard.json`:
-
 ```bash
-cd "DASHBOARD PROSPECÇAO PPGxUNI.ESTR"
-python3 -m http.server 8000
+python3 -m http.server 8000   # na raiz deste repositório
 ```
 
-Depois abra `http://localhost:8000/docs/index.html`.
-
-## Fontes de dados
-
-- **Planilha PPGs/Linhas de pesquisa (PROPESP/ARI)** — nome e descrição
-  oficial de cada linha de pesquisa por PPG (fonte da comparação semântica)
-- **Planilha PPGxDocente (PROPESP/ARI)** — nome, PPG, ORCID e ID Lattes de
-  cada docente da UEA (fonte da seção "Docentes UEA" e dos links do perfil)
-- **OpenAlex** — publicações de pesquisadores estrangeiros e de docentes da
-  UEA (quando têm ORCID cadastrado na planilha), para o match e os perfis;
-  nos perfis, a API de busca semântica (`search.semantic`, ver
-  [help.openalex.org/api/semantic-search](https://help.openalex.org/api/semantic-search))
-  também estima um "grau de afinidade" (barra horizontal, calculada aos
-  poucos pros 8 primeiros conectados) entre a publicação mais recente de uma
-  pessoa e as publicações da outra, filtrando por ORCID
-- **Nominatim (OpenStreetMap)** — geocoding de instituições estrangeiras
-- **ORCID** — perfil público usado como canal de contato tanto dos
-  pesquisadores estrangeiros quanto dos docentes da UEA (não coletamos
-  e-mail/telefone)
-- **Lattes (CNPq)** — só o link/ID já cadastrado na planilha PPGxDocente, sem
-  parsing de PDF
+Abra `http://localhost:8000/docs/index.html`.
 
 ## Limitações conhecidas
 
-- ORCID e ID Lattes de cada docente são preenchidos manualmente pela UEA na
-  planilha — na maior parte dos docentes esses campos ainda estão vazios,
-  então os ícones/links correspondentes e as publicações do perfil só
-  aparecem pra quem já foi preenchido.
-- Como o match agora é por linha de pesquisa do PPG (não por professor
-  individual), todo docente de um PPG vê os mesmos pesquisadores estrangeiros
-  conectados — não há (ainda) uma amarração fina de qual docente pesquisa
-  exatamente qual linha dentro do PPG.
-- Coordenadas de algumas instituições estrangeiras são aproximadas (nível de
-  cidade), quando o nome não é resolvido pelo Nominatim.
+- 6 dos 41 acordos não têm perfil no OpenAlex e, portanto, não têm match.
+- Guiana Francesa não tem polígono próprio no mapa-múndi (é parte da França no
+  TopoJSON), então não é colorida no mapa de países; aparece normalmente no
+  globo de fluxo e nos filtros.
+- Match é por linha de pesquisa do PPG: todo docente de um PPG vê os mesmos
+  pesquisadores conectados.
+- ORCID/ID Lattes dos docentes dependem do preenchimento da planilha PPGxDocente.
+
+Base canônica de PPGs/linhas e docentes: `DATA BASE UEA/PPGS_LINHAS/`.
+`README-DESIGN.txt` documenta o design system (o mesmo do painel de prospecção).

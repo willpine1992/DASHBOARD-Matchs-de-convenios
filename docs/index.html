@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <script>(function(){var t=localStorage.getItem('faap-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);})();</script>
-<title>FIND A ACADEMIC PARTNER - FAAP · Painel</title>
+<title>FIND A ACADEMIC PARTNER - FAAP · Convênios · Painel</title>
 <link rel="stylesheet" href="css/style.css?v=29" />
 </head>
 <body>
@@ -14,8 +14,8 @@
     <img src="image/propespuea.svg" alt="PROPESP UEA" class="topbar__logo" />
     <img src="image/logo_internacionalizacao.png" alt="Comissão de Internacionalização da Pós-Graduação" class="topbar__logo topbar__logo--intl" />
     <div class="topbar__title">
-      <strong>FIND A ACADEMIC PARTNER - FAAP</strong>
-      <span>Pesquisadores UEA × Mundo</span>
+      <strong>FIND A ACADEMIC PARTNER - FAAP · CONVÊNIOS</strong>
+      <span>Pesquisadores UEA × Universidades conveniadas</span>
     </div>
   </div>
 
@@ -28,7 +28,7 @@
     <a href="ods.html" class="topbar__link">ODS</a>
     <a href="flowmap.html" class="topbar__link">Mapa de Fluxo</a>
     <button class="btn btn--ghost" id="btn-clear-filters" style="margin-left:4px;">Limpar filtros</button>
-    <button class="btn" id="btn-report">Gerar relatório de prospecção</button>
+    <button class="btn" id="btn-report">Gerar relatório de matchs</button>
   </nav>
 </header>
 
@@ -102,15 +102,15 @@
 
   <!-- ===================== Coluna 2 — Sankey ===================== -->
   <section class="col col--center">
-    <div class="panel panel--grow" data-help="Diagrama de fluxo (Sankey): liga a linha de pesquisa oficial do PPG à instituição estrangeira onde foi encontrado um pesquisador com trabalho semanticamente parecido. A espessura de cada faixa é proporcional ao número de conexões; passe o mouse sobre uma faixa para ver o valor exato.">
+    <div class="panel panel--grow" data-help="Diagrama de fluxo (Sankey): liga a linha de pesquisa oficial do PPG à instituição conveniada onde foi encontrado um pesquisador com trabalho semanticamente parecido. A espessura de cada faixa é proporcional ao número de conexões; passe o mouse sobre uma faixa para ver o valor exato.">
       <div class="panel__header">
-        <span class="panel__title">Linha de pesquisa × Instituição estrangeira</span>
+        <span class="panel__title">Linha de pesquisa × Instituição conveniada</span>
         <span class="panel__hint" id="sankey-hint"></span>
       </div>
       <div class="panel__body" id="sankey-chart"></div>
     </div>
 
-    <div class="panel" id="sbert-card" data-help="Mede, de 0 a 1, o quão parecido é o significado entre o nome+descrição da linha de pesquisa do PPG e o trabalho do pesquisador estrangeiro, usando um modelo de linguagem (SBERT). Passe o mouse sobre uma faixa do Sankey acima para ver o valor de um par específico aqui.">
+    <div class="panel" id="sbert-card" data-help="Mede, de 0 a 1, o quão parecido é o significado entre o nome+descrição da linha de pesquisa do PPG e o trabalho do pesquisador da conveniada, usando um modelo de linguagem (SBERT). Passe o mouse sobre uma faixa do Sankey acima para ver o valor de um par específico aqui.">
       <div class="panel__header">
         <span class="panel__title">Similaridade semântica (SBERT)</span>
         <span class="panel__hint" id="sbert-hint"></span>
@@ -118,7 +118,7 @@
       <div class="sbert-body">
         <div class="sbert-readout">
           <div class="sbert-score" id="sbert-score">—</div>
-          <div class="sbert-pair" id="sbert-pair">Passe o mouse sobre uma conexão entre Linha de pesquisa e Instituição estrangeira.</div>
+          <div class="sbert-pair" id="sbert-pair">Passe o mouse sobre uma conexão entre Linha de pesquisa e Instituição conveniada.</div>
         </div>
         <div class="sbert-gauge">
           <div class="sbert-gauge__track">
@@ -131,7 +131,7 @@
           A <b>similaridade de cosseno</b> mede o ângulo entre dois vetores — aqui, os
           embeddings que um modelo <b>SBERT</b> (Sentence-BERT) gera para o nome+descrição
           da linha de pesquisa oficial do PPG e para uma publicação do pesquisador
-          estrangeiro. Quanto mais próxima de <b>1</b>, mais parecido é o significado dos
+          da conveniada. Quanto mais próxima de <b>1</b>, mais parecido é o significado dos
           dois textos; próxima de <b>0</b>, os textos não têm relação semântica.
         </p>
       </div>
@@ -141,7 +141,7 @@
   <!-- ===================== Coluna 3 — visão geral ===================== -->
   <section class="col col--right">
 
-    <div class="panel" data-help="Filtra as conexões pelo país de destino da instituição estrangeira.">
+    <div class="panel" data-help="Filtra as conexões pelo país de destino da instituição conveniada.">
       <div class="panel__header"><span class="panel__title">País</span></div>
       <div class="field">
         <select id="filter-pais" class="dropdown">
@@ -151,11 +151,11 @@
     </div>
 
     <div class="panel" style="height:320px; display:flex; flex-direction:column;" data-help="Mapa de calor: quanto mais escura a cor de um país, mais conexões (matches) a UEA tem com instituições localizadas lá, considerando os filtros ativos. Passe o mouse sobre um país para ver o número exato.">
-      <div class="panel__header"><span class="panel__title">País estrangeiro</span></div>
+      <div class="panel__header"><span class="panel__title">País da conveniada</span></div>
       <div class="panel__body" id="map-chart" style="flex:1; min-height:0;"></div>
     </div>
 
-    <div class="panel" id="ods-panel" data-help="ODS da ONU ligados às linhas de pesquisa da UEA que têm conexões com pesquisadores estrangeiros, considerando os filtros ativos. O número em cada quadro é a quantidade de pesquisadores estrangeiros distintos com conexão a linhas classificadas naquele ODS. Escolha uma universidade para ver só as conexões dela; clique num ODS para abrir a página ODS.">
+    <div class="panel" id="ods-panel" data-help="ODS da ONU ligados às linhas de pesquisa da UEA que têm conexões com pesquisadores das conveniadas, considerando os filtros ativos. O número em cada quadro é a quantidade de pesquisadores das conveniadas distintos com conexão a linhas classificadas naquele ODS. Escolha uma universidade para ver só as conexões dela; clique num ODS para abrir a página ODS.">
       <div class="panel__header">
         <span class="panel__title">ODS</span>
         <a class="panel__hint ods-panel__link" href="ods.html" id="ods-panel-link">ver página ODS →</a>
@@ -169,9 +169,9 @@
       <div class="ods-grid ods-grid--mini" id="ods-mini-grid" role="group" aria-label="ODS com conexões"></div>
     </div>
 
-    <div class="panel panel--grow" style="height:500px;" data-help="Ranking dos pesquisadores estrangeiros com mais conexões (matches) com professores da UEA, considerando os filtros ativos. Clique num nome para abrir o perfil completo daquele pesquisador.">
+    <div class="panel panel--grow" style="height:500px;" data-help="Ranking dos pesquisadores das conveniadas com mais conexões (matches) com professores da UEA, considerando os filtros ativos. Clique num nome para abrir o perfil completo daquele pesquisador.">
       <div class="panel__header">
-        <span class="panel__title">Pesquisadores estrangeiros</span>
+        <span class="panel__title">Pesquisadores das conveniadas</span>
         <span class="panel__hint">por conexões</span>
       </div>
       <div class="panel__body" id="foreign-ranking"></div>

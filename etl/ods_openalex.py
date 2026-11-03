@@ -103,7 +103,9 @@ def coletar(fontes: list[dict], from_year: int, dry_run: bool) -> dict:
                 n = str(g["key"]).rsplit("/", 1)[-1]  # https://metadata.un.org/sdg/3 -> "3"
                 if n.isdigit():
                     ods[n] = g["count"]
-            saida[inst["display_name"]] = {
+            # chave = nome do convênio (o mesmo de foreign_institution em linha_matches)
+            saida[f["instituicao"]] = {
+                "openalex_nome": inst["display_name"],
                 "fonte": f["id"], "pais": f["pais"], "openalex_id": iid,
                 "total_trabalhos": total["meta"]["count"], "ods": ods,
             }

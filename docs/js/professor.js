@@ -1,5 +1,5 @@
 /* ==========================================================================
-   FAAP Dashboard — Página 3: Perfil do pesquisador estrangeiro
+   FAAP Dashboard — Página 3: Perfil do pesquisador da conveniada
    ========================================================================== */
 (async function () {
   const { ppgs, linha_matches, institutions, professores, linhaById } = await loadData();
@@ -68,7 +68,7 @@
   /* ---------------- coluna 1: pessoal ---------------- */
   function renderPersonal() {
     d3.select("#topbar-stats").html(`
-      <div class="topbar__stat" data-help="Número de linhas de pesquisa oficiais de PPGs da UEA que casaram semanticamente com o trabalho deste pesquisador estrangeiro."><b>${fmt(linhas.length)}</b><small>Linhas em comum</small></div>
+      <div class="topbar__stat" data-help="Número de linhas de pesquisa oficiais de PPGs da UEA que casaram semanticamente com o trabalho deste pesquisador da conveniada."><b>${fmt(linhas.length)}</b><small>Linhas em comum</small></div>
       <div class="topbar__stat" data-help="Número de professores da UEA vinculados aos PPGs donos dessas linhas de pesquisa."><b>${fmt(ueaProfs.length)}</b><small>Prof. UEA</small></div>
     `);
 
@@ -132,25 +132,44 @@
     fetchInstitutionInfo(instName);
   }
 
+  // dados do acordo (painel de convênios) — vêm em data.institutions, ver etl/export_dashboard_data.py
+  function convenioRows() {
+    if (!inst || !inst.convenio_id) return [];
+    const br = (iso) => (iso ? iso.split("-").reverse().join("/") : null);
+    const rows = [["Convênio", `${inst.tipo || "Acordo"} · ${inst.status || "—"}`]];
+    if (inst.data_inicio) rows.push(["Vigência", inst.prazo_indeterminado
+      ? `desde ${br(inst.data_inicio)} (prazo indeterminado)`
+      : `${br(inst.data_inicio)} a ${br(inst.data_fim) || "—"}`]);
+    return rows;
+  }
+
   async function fetchInstitutionInfo(name) {
     const el = document.getElementById("i-details");
+    const render = (rows) => {
+      el.innerHTML = rows.map(([k, v]) => `<div class="info-row"><span>${k}</span><span>${v}</span></div>`).join("") ||
+        '<div class="empty-hint">Sem informações adicionais.</div>';
+    };
     try {
-      const url = `https://api.openalex.org/institutions?search=${encodeURIComponent(name)}&per-page=1`;
+      // o nome do convênio está em português; com o ID OpenAlex a busca é exata
+      const url = inst && inst.openalex_id
+        ? `https://api.openalex.org/institutions/${inst.openalex_id}`
+        : `https://api.openalex.org/institutions?search=${encodeURIComponent(name)}&per-page=1`;
       const data = await fetch(url).then((r) => r.json());
-      const i = data.results && data.results[0];
-      if (!i) { el.innerHTML = '<div class="empty-hint">Sem informações adicionais.</div>'; return; }
+      const i = data.results ? data.results[0] : data;
+      if (!i || !i.id) { render(convenioRows()); return; }
 
-      const rows = [];
+      const rows = convenioRows();
       if (i.type) rows.push(["Tipo", capitalize(i.type)]);
       if (i.homepage_url) rows.push(["Site", `<a href="${i.homepage_url}" target="_blank" rel="noopener">${shortenUrl(i.homepage_url)}</a>`]);
       if (i.works_count != null) rows.push(["Publicações (OpenAlex)", fmt(i.works_count)]);
       if (i.cited_by_count != null) rows.push(["Citações", fmt(i.cited_by_count)]);
       if (i.ror) rows.push(["ROR", `<a href="${i.ror}" target="_blank" rel="noopener">registro ROR ↗</a>`]);
 
-      el.innerHTML = rows.map(([k, v]) => `<div class="info-row"><span>${k}</span><span>${v}</span></div>`).join("") ||
-        '<div class="empty-hint">Sem informações adicionais.</div>';
+      render(rows);
     } catch (e) {
-      el.innerHTML = '<div class="empty-hint">Não foi possível carregar informações da instituição agora.</div>';
+      const rows = convenioRows();
+      if (rows.length) render(rows);
+      else el.innerHTML = '<div class="empty-hint">Não foi possível carregar informações da instituição agora.</div>';
     }
   }
 

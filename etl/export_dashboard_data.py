@@ -10,7 +10,9 @@ Schema (substitui o antigo researchers/edges por keyword de professor):
   linha_matches  - [{linha_id, ppg_codigo, foreign_author_name, foreign_author_orcid,
                       foreign_author_openalex_id, foreign_institution, foreign_country,
                       score, sample_work_title, sample_work_doi}]
-  institutions   - instituições estrangeiras distintas (agregado de linha_matches), geocodificadas
+  institutions   - instituições conveniadas com match (agregado de linha_matches); coordenadas,
+                   ID OpenAlex e dados do acordo vêm do painel de convênios (etl/convenios.py)
+  convenios      - TODOS os acordos do painel de convênios (inclusive os sem match / sem OpenAlex)
   manaus         - ponto fixo de origem (Manaus/AM)
 
 `orcid` e `lattes_id` vêm direto da planilha (aba "PPGxDocente", ver
@@ -28,6 +30,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+from convenios import carregar_convenios
 from geocode import Geocoder
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
@@ -238,7 +241,12 @@ def export_professores() -> list[dict]:
     return [{"id": i + 1, **p} for i, p in enumerate(professores)]
 
 
-def export_institutions(linha_matches: list[dict], geocoder: Geocoder) -> list[dict]:
+CAMPOS_CONVENIO = ("convenio_id", "tipo", "status", "data_inicio", "data_fim", "prazo_indeterminado",
+                   "openalex_id", "openalex_nome")
+
+
+def export_institutions(linha_matches: list[dict], convenios: list[dict], geocoder: Geocoder) -> list[dict]:
+    conv_por_nome = {c["instituicao"]: c for c in convenios}
     agg: dict[tuple[str, str], dict] = {}
     for m in linha_matches:
         inst, country = m.get("foreign_institution"), m.get("foreign_country")
@@ -252,12 +260,31 @@ def export_institutions(linha_matches: list[dict], geocoder: Geocoder) -> list[d
 
     out = []
     for (inst, country), bucket in agg.items():
-        lat, lon = resolve_institution_coords(inst, country, geocoder)
+        conv = conv_por_nome.get(inst, {})
+        # coordenadas já resolvidas (e curadas) no painel de convênios; Nominatim só como reserva
+        lat, lon = conv.get("lat"), conv.get("lon")
+        if lat is None:
+            lat, lon = resolve_institution_coords(conv.get("openalex_nome") or inst, country, geocoder)
         out.append({
             "instituicao": inst, "pais": country, "lat": lat, "lon": lon,
             "n_matches": bucket["n_matches"], "n_researchers": len(bucket["autores"]),
+            **{k: conv.get(k) for k in CAMPOS_CONVENIO},
         })
     return out
+
+
+def export_convenios(convenios: list[dict], institutions: list[dict]) -> list[dict]:
+    com_match = {i["instituicao"]: i for i in institutions}
+    return [
+        {
+            "instituicao": c["instituicao"], "pais": c["pais"], "continente": c["continente"],
+            "lat": c["lat"], "lon": c["lon"], "openalex_status": c["openalex_status"], "nota": c["nota"],
+            **{k: c.get(k) for k in CAMPOS_CONVENIO},
+            "n_matches": com_match.get(c["instituicao"], {}).get("n_matches", 0),
+            "n_researchers": com_match.get(c["instituicao"], {}).get("n_researchers", 0),
+        }
+        for c in convenios
+    ]
 
 
 def main() -> None:
@@ -268,7 +295,8 @@ def main() -> None:
 
     professores = export_professores()
     linha_matches = carregar_linha_matches()
-    institutions = export_institutions(linha_matches, geocoder)
+    convenios = carregar_convenios()
+    institutions = export_institutions(linha_matches, convenios, geocoder)
 
     dashboard = {
         "ppgs": [
@@ -278,6 +306,7 @@ def main() -> None:
         "professores": professores,
         "linha_matches": linha_matches,
         "institutions": institutions,
+        "convenios": export_convenios(convenios, institutions),
         "manaus": MANAUS,
     }
     (DATA_DIR / "dashboard.json").write_text(
@@ -288,7 +317,7 @@ def main() -> None:
     n_com_lattes = sum(1 for p in professores if p["lattes_id"])
     print(f"dashboard.json -> {len(dashboard['ppgs'])} PPGs, {len(professores)} docentes "
           f"({n_com_orcid} com ORCID, {n_com_lattes} com ID Lattes), {len(linha_matches)} matches, "
-          f"{len(institutions)} instituições estrangeiras")
+          f"{len(institutions)} conveniadas com match (de {len(convenios)} convênios)")
     print(f"pasta de saída: {DATA_DIR}")
 
 

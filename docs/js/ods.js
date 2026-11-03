@@ -45,7 +45,7 @@
     <div class="topbar__stat" data-help="Os 17 Objetivos de Desenvolvimento Sustentável da Agenda 2030 da ONU."><b>17</b><small>ODS</small></div>
     <div class="topbar__stat" data-help="Linhas de pesquisa oficiais dos PPGs da UEA classificadas em ODS por similaridade semântica."><b>${fmt(N_LINHAS)}</b><small>Linhas UEA classificadas</small></div>
     <div class="topbar__stat" data-help="Linhas cuja melhor similaridade ficou abaixo do limiar de confiança (${D.metodo.min_sim.toString().replace(".", ",")}). Aparecem marcadas como 'baixa confiança' nas listas."><b>${fmt(nFracas)}</b><small>Baixa confiança</small></div>
-    <div class="topbar__stat" data-help="Instituições estrangeiras com pelo menos um pesquisador de match forte (score ≥ ${D.metodo.score_alto_matching.toString().replace(".", ",")}) com linhas da UEA."><b>${fmt(nInst)}</b><small>Instituições com contatos</small></div>
+    <div class="topbar__stat" data-help="Instituições conveniadas com pelo menos um pesquisador de match forte (score ≥ ${D.metodo.score_alto_matching.toString().replace(".", ",")}) com linhas da UEA."><b>${fmt(nInst)}</b><small>Instituições com contatos</small></div>
     <div class="topbar__stat" data-help="${OA ? "Dados de produção por ODS do OpenAlex carregados (janela desde " + OA.from_year + ")." : "A contagem de trabalhos por ODS de cada universidade depende de consultas ao OpenAlex (etl/ods_openalex.py), ainda não executadas por falta de créditos de API."}"><b>${OA ? "OK" : "Pendente"}</b><small>OpenAlex por ODS</small></div>
   `;
 
@@ -134,7 +134,7 @@
     if (!selected) {
       el.innerHTML = `<div class="ods-detail__empty">
           <img src="image/ods/ods.png" alt="" />
-          <p>Selecione um ODS para ver as linhas de pesquisa da UEA associadas e as universidades estrangeiras com pesquisadores nessas linhas.</p>
+          <p>Selecione um ODS para ver as linhas de pesquisa da UEA associadas e as universidades conveniadas com pesquisadores nessas linhas.</p>
         </div>`;
       return;
     }

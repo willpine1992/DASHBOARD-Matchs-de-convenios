@@ -146,7 +146,7 @@ function buildLinhasByPPGSection(matches) {
     </section>`;
 }
 
-/* ---------- hierarquia Instituição estrangeira > Linha de pesquisa > Pesquisadores estrangeiros ---------- */
+/* ---------- hierarquia Instituição conveniada > Linha de pesquisa > Pesquisadores das conveniadas ---------- */
 function aggregateInstitutionHierarchy(matches) {
   const byInst = new Map(); // instituicao -> { pais, ppgs:Set, estrangeiros:Set, conexoes, linhas:Map }
 
@@ -209,8 +209,8 @@ function buildInstitutionHierarchySection(matches) {
 
   return `
     <section class="report-section">
-      <h2>Instituições estrangeiras</h2>
-      <p class="report-note">Organizado por instituição estrangeira; dentro de cada uma, todas as linhas de pesquisa oficiais da UEA que deram match, e os pesquisadores estrangeiros daquela instituição conectados a cada linha.</p>
+      <h2>Instituições conveniadas</h2>
+      <p class="report-note">Organizado por instituição conveniada; dentro de cada uma, todas as linhas de pesquisa oficiais da UEA que deram match, e os pesquisadores das conveniadas daquela instituição conectados a cada linha.</p>
       ${blocks || `<p class="report-note">Sem dados para os filtros atuais.</p>`}
     </section>`;
 }
@@ -259,7 +259,7 @@ function buildReportHTML({ professores, matches, filters, professorById, linhaBy
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8" />
-<title>Relatório de Prospecção — Parcerias Internacionais UEA</title>
+<title>Relatório de Matchs — Universidades Conveniadas UEA</title>
 <style>
   :root {
     --ink-primary:#0b3d2b; --ink-secondary:#3a3a3c; --ink-muted:#7a8580;
@@ -331,8 +331,8 @@ function buildReportHTML({ professores, matches, filters, professorById, linhaBy
 <div class="report-header">
   ${logoDataURI ? `<img src="${logoDataURI}" alt="PROPESP UEA" />` : ""}
   <div>
-    <h1>Relatório de Prospecção de Parcerias Internacionais</h1>
-    <div class="meta">PPGs UEA × Mundo, por linha de pesquisa · gerado em ${reportEsc(genDate)}</div>
+    <h1>Relatório de Matchs com Universidades Conveniadas</h1>
+    <div class="meta">PPGs UEA × Universidades conveniadas, por linha de pesquisa · gerado em ${reportEsc(genDate)}</div>
   </div>
 </div>
 
@@ -342,10 +342,10 @@ function buildReportHTML({ professores, matches, filters, professorById, linhaBy
 
 <div class="stat-grid">
   <div class="stat-card"><b>${reportFmt(professores.length)}</b><span>Professores UEA (de ${reportFmt(totals.professores)})</span></div>
-  <div class="stat-card"><b>${reportFmt(distinctInstitutions)}</b><span>Instituições estrangeiras (de ${reportFmt(totals.institutions)})</span></div>
+  <div class="stat-card"><b>${reportFmt(distinctInstitutions)}</b><span>Instituições conveniadas (de ${reportFmt(totals.institutions)})</span></div>
   <div class="stat-card"><b>${reportFmt(distinctCountries)}</b><span>Países</span></div>
   <div class="stat-card"><b>${reportFmt(matches.length)}</b><span>Conexões</span></div>
-  <div class="stat-card"><b>${reportFmt(distinctForeign)}</b><span>Pesquisadores estrangeiros</span></div>
+  <div class="stat-card"><b>${reportFmt(distinctForeign)}</b><span>Pesquisadores das conveniadas</span></div>
 </div>
 
 <section class="report-section">
@@ -361,7 +361,7 @@ ${linhasByPPGSection}
 ${institutionHierarchySection}
 
 <section class="report-section">
-  <h2>Pesquisadores estrangeiros mais conectados</h2>
+  <h2>Pesquisadores das conveniadas mais conectados</h2>
   <table class="report-table">
     <thead><tr><th class="num">#</th><th>Nome</th><th>Instituição</th><th>País</th><th>PPGs mais conectados</th><th class="num">Conexões</th></tr></thead>
     <tbody>${foreignRankedRows || `<tr><td colspan="6">Sem dados para os filtros atuais.</td></tr>`}</tbody>
@@ -369,7 +369,7 @@ ${institutionHierarchySection}
 </section>
 
 <div class="report-footer">
-  Gerado automaticamente pelo Painel de Parcerias Internacionais — PROPESP/UEA. Fonte dos matches: linha de pesquisa oficial de cada PPG (nome + descrição) × publicações de pesquisadores estrangeiros indexadas no OpenAlex, ranqueados por similaridade semântica (Sentence-BERT).
+  Gerado automaticamente pelo Painel de Matchs de Convênios — PROPESP/UEA. Fonte dos matches: linha de pesquisa oficial de cada PPG (nome + descrição) × publicações de pesquisadores das conveniadas indexadas no OpenAlex, ranqueados por similaridade semântica (Sentence-BERT).
 </div>
 
 </body>
@@ -392,7 +392,7 @@ function generateProspectingReport({ professores, matches, filters, professorByI
   }
   win.document.write(
     '<!doctype html><meta charset="utf-8"><title>Gerando relatório…</title>' +
-    '<body style="font-family:-apple-system,sans-serif;color:#3a3a3c;padding:40px;">Gerando relatório de prospecção…</body>'
+    '<body style="font-family:-apple-system,sans-serif;color:#3a3a3c;padding:40px;">Gerando relatório de matchs…</body>'
   );
 
   const btn = document.getElementById("btn-report");
@@ -416,7 +416,7 @@ function generateProspectingReport({ professores, matches, filters, professorByI
       console.error("generateProspectingReport falhou:", err);
     })
     .finally(() => {
-      if (btn) { btn.disabled = false; btn.textContent = "Gerar relatório de prospecção"; }
+      if (btn) { btn.disabled = false; btn.textContent = "Gerar relatório de matchs"; }
     });
 }
 

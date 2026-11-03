@@ -1,7 +1,7 @@
 /* ==========================================================================
    FAAP Dashboard — Perfil do docente UEA (espelha professor.js, mas para
-   o lado UEA: PPG(s) no lugar de instituição estrangeira, linhas oficiais do
-   PPG no lugar de "linhas em comum", pesquisadores estrangeiros conectados
+   o lado UEA: PPG(s) no lugar de instituição conveniada, linhas oficiais do
+   PPG no lugar de "linhas em comum", pesquisadores das conveniadas conectados
    via qualquer linha do PPG no lugar de "professores UEA conectados").
    ========================================================================== */
 (async function () {
@@ -65,7 +65,7 @@
   function renderPersonal() {
     d3.select("#topbar-stats").html(`
       <div class="topbar__stat" data-help="Número de linhas de pesquisa oficiais do(s) PPG(s) deste docente."><b>${fmt(linhasDoPPG.length)}</b><small>Linhas do PPG</small></div>
-      <div class="topbar__stat" data-help="Número de pesquisadores estrangeiros conectados a alguma linha do(s) PPG(s) deste docente."><b>${fmt(estrangeirosOrdenados.length)}</b><small>Pesq. estrangeiros</small></div>
+      <div class="topbar__stat" data-help="Número de pesquisadores das conveniadas conectados a alguma linha do(s) PPG(s) deste docente."><b>${fmt(estrangeirosOrdenados.length)}</b><small>Pesq. conveniadas</small></div>
     `);
 
     d3.select("#p-avatar").style("background", colorFor(docente.nome)).text(initials(docente.nome));
@@ -97,7 +97,7 @@
     const wrap = d3.select("#p-profs");
     profRowByKey = new Map();
     if (!estrangeirosOrdenados.length) {
-      wrap.html('<div class="empty-hint">Nenhum pesquisador estrangeiro conectado ainda.</div>');
+      wrap.html('<div class="empty-hint">Nenhum pesquisador da conveniada conectado ainda.</div>');
     } else {
       const rows = wrap.selectAll(".pickrow").data(estrangeirosOrdenados, (d) => d.orcid || d.nome).join("div").attr("class", "pickrow");
       rows.html((d) => `

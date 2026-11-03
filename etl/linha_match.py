@@ -9,14 +9,13 @@ MATCHING/rerank.py já usado pelos scripts *_match.py por país, só trocando a 
 do texto de busca. Um match de linha vale para TODOS os professores daquele PPG,
 não para um professor isolado.
 
-Fontes (mesmos alvos já usados pelos scripts *_match.py existentes, reaproveitando
-os arquivos de cache já populados de cada um — só adiciona chaves novas):
-  Alemanha (país inteiro), Gana (University of Ghana), Argélia (Univ. of Algiers),
-  Moçambique (Eduardo Mondlane), África do Sul (Johannesburg + Stellenbosch),
-  Angola (Katyavala Bwila), Reino Unido (8 universidades), Singapura (NUS, NTU, SMU, SUTD, SIT, SUSS, LASALLE+NAFA=UAS, JCU, INSEAD, SP Jain).
+Fontes: SOMENTE as universidades já conveniadas com a UEA (inclusive as
+brasileiras), lidas de DASHBOARD CONVENIOS UEA/data/dashboard.json via
+etl/convenios.py — uma fonte por acordo (id = id do acordo, ex. AC0001).
+Mesma metodologia do painel de prospecção (PPGxUNI.ESTR), só muda a lista de alvos.
 
 Uso:
-    ./etl_venv_or_system_python3 etl/linha_match.py [--limit N] [--fontes ALE,GHA,...]
+    python3 etl/linha_match.py [--limit N] [--fontes AC0001,AC0002,...] [--merge]
 """
 from __future__ import annotations
 
@@ -33,7 +32,7 @@ import urllib.request
 from datetime import date
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parent.parent  # .../DASHBOARD PROSPECÇAO PPGxUNI.ESTR
+REPO_ROOT = Path(__file__).resolve().parent.parent  # .../DASHBOARD Matchs de convenios
 DASHBOARDS_ROOT = REPO_ROOT.parents[1]  # .../PROJETOS DASHBOARDS
 
 PPGS_LINHAS_PATH = DASHBOARDS_ROOT / "DATA BASE UEA" / "PPGS_LINHAS" / "output" / "ppgs_linhas.json"
@@ -67,62 +66,14 @@ GENERIC_KEYWORDS_STOPLIST = {
     "process", "processes", "management", "public",
 }
 
-# Mesmos alvos dos scripts WEBSCRAPING/*/etl/*_match.py e etl/germany_match.py —
-# reaproveita o cache de cada um (arquivo já populado por aquisições anteriores).
-FONTES = [
-    {"id": "ALE", "pais": "Alemanha", "country_code": "DE", "institution_id": None,
-     "cache": REPO_ROOT / "cache" / "germany_match_cache.json"},
-    {"id": "GHA", "pais": "Gana", "country_code": None, "institution_id": "I138690464",
-     "cache": DASHBOARDS_ROOT / "WEBSCRAPING" / "GHANA" / "cache" / "ghana_match_cache.json"},
-    {"id": "DZA", "pais": "Argélia", "country_code": None, "institution_id": "I192268740",
-     "cache": DASHBOARDS_ROOT / "WEBSCRAPING" / "ARGELIA" / "cache" / "ualger_match_cache.json"},
-    {"id": "MOZ", "pais": "Moçambique", "country_code": None, "institution_id": "I16904388",
-     "cache": DASHBOARDS_ROOT / "WEBSCRAPING" / "MOÇAMBIQUE " / "cache" / "uem_match_cache.json"},
-    {"id": "ZAF-UJ", "pais": "África do Sul", "country_code": None, "institution_id": "I24027795",
-     "cache": DASHBOARDS_ROOT / "WEBSCRAPING" / "ÁFRICA DO SUL" / "cache" / "uj_match_cache.json"},
-    {"id": "ZAF-SUN", "pais": "África do Sul", "country_code": None, "institution_id": "I26092322",
-     "cache": DASHBOARDS_ROOT / "WEBSCRAPING" / "ÁFRICA DO SUL" / "Universidade de Stellenbosch " / "cache" / "stellenbosch_match_cache.json"},
-    {"id": "AGO", "pais": "Angola", "country_code": None, "institution_id": "I4210120595",
-     "cache": DASHBOARDS_ROOT / "WEBSCRAPING" / "ANGOLA" / "Universidade Katyavala Bwila" / "cache" / "katyavala_match_cache.json"},
-    {"id": "GBR-BHM", "pais": "Reino Unido", "country_code": None, "institution_id": "I79619799",
-     "cache": DASHBOARDS_ROOT / "WEBSCRAPING" / "REINO UNIDO" / "University of Birmingham" / "cache" / "birmingham_match_cache.json"},
-    {"id": "GBR-WAR", "pais": "Reino Unido", "country_code": None, "institution_id": "I39555362",
-     "cache": DASHBOARDS_ROOT / "WEBSCRAPING" / "REINO UNIDO" / "University of Warwick" / "cache" / "warwick_match_cache.json"},
-    {"id": "GBR-COV", "pais": "Reino Unido", "country_code": None, "institution_id": "I73417466",
-     "cache": DASHBOARDS_ROOT / "WEBSCRAPING" / "REINO UNIDO" / "Coventry University" / "cache" / "coventry_match_cache.json"},
-    {"id": "GBR-ICL", "pais": "Reino Unido", "country_code": None, "institution_id": "I47508984",
-     "cache": DASHBOARDS_ROOT / "WEBSCRAPING" / "REINO UNIDO" / "Imperial College London" / "cache" / "imperial_match_cache.json"},
-    {"id": "GBR-KCL", "pais": "Reino Unido", "country_code": None, "institution_id": "I183935753",
-     "cache": DASHBOARDS_ROOT / "WEBSCRAPING" / "REINO UNIDO" / "King's College London" / "cache" / "kcl_match_cache.json"},
-    {"id": "GBR-CAM", "pais": "Reino Unido", "country_code": None, "institution_id": "I241749",
-     "cache": DASHBOARDS_ROOT / "WEBSCRAPING" / "REINO UNIDO" / "University of Cambridge" / "cache" / "cambridge_match_cache.json"},
-    {"id": "GBR-QMUL", "pais": "Reino Unido", "country_code": None, "institution_id": "I166337079",
-     "cache": DASHBOARDS_ROOT / "WEBSCRAPING" / "REINO UNIDO" / "Queen Mary University of London" / "cache" / "qmul_match_cache.json"},
-    {"id": "GBR-STA", "pais": "Reino Unido", "country_code": None, "institution_id": "I16835326",
-     "cache": DASHBOARDS_ROOT / "WEBSCRAPING" / "REINO UNIDO" / "University of St Andrews" / "cache" / "standrews_match_cache.json"},
-    {"id": "SGP-NUS", "pais": "Singapura", "country_code": None, "institution_id": "I165932596",
-     "cache": DASHBOARDS_ROOT / "WEBSCRAPING" / "SINGAPRA" / "National University of Singapore" / "cache" / "nus_match_cache.json"},
-    {"id": "SGP-NTU", "pais": "Singapura", "country_code": None, "institution_id": "I172675005",
-     "cache": DASHBOARDS_ROOT / "WEBSCRAPING" / "SINGAPRA" / "Nanyang Technological University" / "cache" / "ntu_match_cache.json"},
-    {"id": "SGP-SMU", "pais": "Singapura", "country_code": None, "institution_id": "I79891267",
-     "cache": DASHBOARDS_ROOT / "WEBSCRAPING" / "SINGAPRA" / "Singapore Management University" / "cache" / "smu_match_cache.json"},
-    {"id": "SGP-SUTD", "pais": "Singapura", "country_code": None, "institution_id": "I152815399",
-     "cache": DASHBOARDS_ROOT / "WEBSCRAPING" / "SINGAPRA" / "Singapore University of Technology and Design" / "cache" / "sutd_match_cache.json"},
-    {"id": "SGP-SIT", "pais": "Singapura", "country_code": None, "institution_id": "I168639165",
-     "cache": DASHBOARDS_ROOT / "WEBSCRAPING" / "SINGAPRA" / "Singapore Institute of Technology" / "cache" / "sit_match_cache.json"},
-    {"id": "SGP-SUSS", "pais": "Singapura", "country_code": None, "institution_id": "I8696757",
-     "cache": DASHBOARDS_ROOT / "WEBSCRAPING" / "SINGAPRA" / "Singapore University of Social Sciences" / "cache" / "suss_match_cache.json"},
-    {"id": "SGP-LASALLE", "pais": "Singapura", "country_code": None, "institution_id": "I4210157043",
-     "cache": DASHBOARDS_ROOT / "WEBSCRAPING" / "SINGAPRA" / "LASALLE College of the Arts (UAS)" / "cache" / "lasalle_match_cache.json"},
-    {"id": "SGP-NAFA", "pais": "Singapura", "country_code": None, "institution_id": "I4210109929",
-     "cache": DASHBOARDS_ROOT / "WEBSCRAPING" / "SINGAPRA" / "Nanyang Academy of Fine Arts (UAS)" / "cache" / "nafa_match_cache.json"},
-    {"id": "SGP-JCU", "pais": "Singapura", "country_code": None, "institution_id": "I4210110442",
-     "cache": DASHBOARDS_ROOT / "WEBSCRAPING" / "SINGAPRA" / "James Cook University Singapore" / "cache" / "jcu_match_cache.json"},
-    {"id": "SGP-INSEAD", "pais": "Singapura", "country_code": None, "institution_id": "I4210152270",
-     "cache": DASHBOARDS_ROOT / "WEBSCRAPING" / "SINGAPRA" / "INSEAD Singapore" / "cache" / "insead_match_cache.json"},
-    {"id": "SGP-SPJAIN", "pais": "Singapura", "country_code": None, "institution_id": "I4403386623",
-     "cache": DASHBOARDS_ROOT / "WEBSCRAPING" / "SINGAPRA" / "SP Jain School of Global Management Singapore" / "cache" / "spjain_match_cache.json"},
-]
+# Alvos = universidades conveniadas da UEA, lidas direto do painel de convênios
+# (DASHBOARD CONVENIOS UEA) e mapeadas para o OpenAlex em etl/convenios_openalex.json.
+# Convênios que já tinham cache de aquisição de outra rodada (prospecção)
+# reaproveitam esse arquivo — só adiciona chaves novas.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from convenios import fontes_de_match  # noqa: E402
+
+FONTES = fontes_de_match()
 
 
 class ForeignMatcher:
@@ -294,8 +245,8 @@ def main() -> None:
     ap.add_argument("--limit", type=int, default=None, help="processa só as N primeiras linhas (debug)")
     ap.add_argument("--fontes", type=str, default=None, help="lista de ids de FONTES separada por vírgula (default: todas)")
     ap.add_argument("--merge", action="store_true",
-                    help="preserva os matches já gravados de OUTROS países (só substitui os do(s) país(es) das --fontes); "
-                         "use ao adicionar um país novo sem reprocessar os demais")
+                    help="preserva os matches já gravados de OUTROS convênios (só substitui os das --fontes); "
+                         "use para rodar em lotes sem reprocessar os demais")
     ap.add_argument("--offline", action="store_true",
                     help="não faz buscas novas no OpenAlex: usa só o cache (resultado PARCIAL se o cache estiver incompleto)")
     ap.add_argument("--from-year", type=int, default=date.today().year - YEARS_BACK)
@@ -347,12 +298,13 @@ def main() -> None:
     # 2) aquisição de candidatos por fonte + linha
     todos_matches: list[dict] = []
     if args.merge and OUTPUT_PATH.exists():
-        paises_alvo = {f["pais"] for f in fontes}
+        # chave por convênio (não por país): vários conveniados dividem o mesmo país
+        ids_alvo = {f["id"] for f in fontes}
         existentes = json.loads(OUTPUT_PATH.read_text(encoding="utf-8"))
-        todos_matches = [m for m in existentes if m.get("foreign_country") not in paises_alvo]
-        print(f"[linha_match] --merge: {len(todos_matches)} matches de outros países preservados")
+        todos_matches = [m for m in existentes if m.get("convenio_id") not in ids_alvo]
+        print(f"[linha_match] --merge: {len(todos_matches)} matches de outros convênios preservados")
     for fonte in fontes:
-        print(f"\n[linha_match] fonte: {fonte['id']} ({fonte['pais']})")
+        print(f"\n[linha_match] fonte: {fonte['id']} {fonte['instituicao']} ({fonte['pais']})")
         matcher = ForeignMatcher(fonte["cache"], fonte["country_code"], fonte["institution_id"])
 
         fila = []
@@ -385,8 +337,12 @@ def main() -> None:
                     "foreign_author_name": m.get("nome"),
                     "foreign_author_orcid": m.get("orcid"),
                     "foreign_author_openalex_id": m.get("openalex_id"),
-                    "foreign_institution": m.get("instituicao"),
+                    # nome do convênio (igual ao painel de convênios), não o display_name
+                    # do OpenAlex — um ponto por conveniada no mapa/filtros
+                    "foreign_institution": fonte["instituicao"],
+                    "foreign_institution_openalex": m.get("instituicao"),
                     "foreign_country": fonte["pais"],
+                    "convenio_id": fonte["id"],
                     "score": m.get("score"),
                     "sample_work_title": m.get("sample_title"),
                     "sample_work_doi": m.get("sample_doi"),

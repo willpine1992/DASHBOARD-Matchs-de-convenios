@@ -89,7 +89,7 @@ function initThemeToggle() {
 
 async function loadData() {
   const opts = { cache: "no-cache" };
-  const [{ ppgs, professores, linha_matches, institutions, manaus }, capesNotas] = await Promise.all([
+  const [{ ppgs, professores, linha_matches, institutions, convenios = [], manaus }, capesNotas] = await Promise.all([
     fetch("../data/dashboard.json", opts).then((r) => r.json()),
     fetch("../data/capes_notas.json", opts).then((r) => r.json()),
   ]);
@@ -115,7 +115,7 @@ async function loadData() {
   const capesByCode = new Map(capesNotas.programas.map((p) => [p.codigo.normalize("NFC"), p]));
 
   return {
-    ppgs, professores, linha_matches, institutions, manaus,
+    ppgs, professores, linha_matches, institutions, convenios, manaus,
     institutionByName, professorById, ppgByCodigo, linhaById,
     capesByCode, capesOpcoes: capesNotas.opcoes,
   };
