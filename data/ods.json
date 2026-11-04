@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-11-03",
+ "gerado_em": "2026-11-04",
  "metodo": {
   "classificador": "Sentence-BERT all-MiniLM-L6-v2 (cosseno entre linha traduzida p/ EN e descrição do ODS)",
   "min_sim": 0.2,
@@ -6399,10 +6399,288 @@
      "matches": 37
     }
    }
+  },
+  "Università “G. d’Annunzio” Chieti-Pescara": {
+   "pais": "Itália",
+   "n_pesquisadores": 77,
+   "ods": {
+    "13": {
+     "pesquisadores": 6,
+     "matches": 6
+    },
+    "15": {
+     "pesquisadores": 17,
+     "matches": 43
+    },
+    "3": {
+     "pesquisadores": 28,
+     "matches": 31
+    },
+    "4": {
+     "pesquisadores": 17,
+     "matches": 20
+    },
+    "5": {
+     "pesquisadores": 1,
+     "matches": 1
+    },
+    "10": {
+     "pesquisadores": 7,
+     "matches": 7
+    },
+    "14": {
+     "pesquisadores": 1,
+     "matches": 1
+    },
+    "8": {
+     "pesquisadores": 1,
+     "matches": 1
+    },
+    "12": {
+     "pesquisadores": 11,
+     "matches": 11
+    },
+    "16": {
+     "pesquisadores": 3,
+     "matches": 5
+    },
+    "11": {
+     "pesquisadores": 3,
+     "matches": 5
+    },
+    "9": {
+     "pesquisadores": 7,
+     "matches": 9
+    },
+    "17": {
+     "pesquisadores": 7,
+     "matches": 9
+    },
+    "6": {
+     "pesquisadores": 6,
+     "matches": 6
+    }
+   }
+  },
+  "Universidade de Coimbra": {
+   "pais": "Portugal",
+   "n_pesquisadores": 213,
+   "ods": {
+    "15": {
+     "pesquisadores": 52,
+     "matches": 74
+    },
+    "13": {
+     "pesquisadores": 16,
+     "matches": 16
+    },
+    "3": {
+     "pesquisadores": 82,
+     "matches": 94
+    },
+    "4": {
+     "pesquisadores": 52,
+     "matches": 70
+    },
+    "14": {
+     "pesquisadores": 8,
+     "matches": 8
+    },
+    "9": {
+     "pesquisadores": 33,
+     "matches": 40
+    },
+    "6": {
+     "pesquisadores": 22,
+     "matches": 29
+    },
+    "12": {
+     "pesquisadores": 7,
+     "matches": 7
+    },
+    "5": {
+     "pesquisadores": 4,
+     "matches": 4
+    },
+    "10": {
+     "pesquisadores": 2,
+     "matches": 2
+    },
+    "16": {
+     "pesquisadores": 2,
+     "matches": 2
+    },
+    "17": {
+     "pesquisadores": 20,
+     "matches": 27
+    },
+    "11": {
+     "pesquisadores": 4,
+     "matches": 4
+    }
+   }
+  },
+  "Universidade do Porto": {
+   "pais": "Portugal",
+   "n_pesquisadores": 301,
+   "ods": {
+    "15": {
+     "pesquisadores": 50,
+     "matches": 68
+    },
+    "13": {
+     "pesquisadores": 19,
+     "matches": 19
+    },
+    "4": {
+     "pesquisadores": 57,
+     "matches": 69
+    },
+    "12": {
+     "pesquisadores": 9,
+     "matches": 9
+    },
+    "9": {
+     "pesquisadores": 29,
+     "matches": 31
+    },
+    "3": {
+     "pesquisadores": 159,
+     "matches": 183
+    },
+    "14": {
+     "pesquisadores": 6,
+     "matches": 6
+    },
+    "5": {
+     "pesquisadores": 7,
+     "matches": 7
+    },
+    "10": {
+     "pesquisadores": 2,
+     "matches": 2
+    },
+    "8": {
+     "pesquisadores": 1,
+     "matches": 1
+    },
+    "16": {
+     "pesquisadores": 3,
+     "matches": 4
+    },
+    "11": {
+     "pesquisadores": 4,
+     "matches": 5
+    },
+    "17": {
+     "pesquisadores": 23,
+     "matches": 25
+    },
+    "6": {
+     "pesquisadores": 9,
+     "matches": 23
+    }
+   }
+  },
+  "Universidade Fernando Pessoa": {
+   "pais": "Portugal",
+   "n_pesquisadores": 47,
+   "ods": {
+    "15": {
+     "pesquisadores": 4,
+     "matches": 7
+    },
+    "13": {
+     "pesquisadores": 2,
+     "matches": 2
+    },
+    "3": {
+     "pesquisadores": 24,
+     "matches": 33
+    },
+    "12": {
+     "pesquisadores": 1,
+     "matches": 1
+    },
+    "14": {
+     "pesquisadores": 1,
+     "matches": 1
+    },
+    "4": {
+     "pesquisadores": 9,
+     "matches": 9
+    },
+    "16": {
+     "pesquisadores": 5,
+     "matches": 5
+    },
+    "9": {
+     "pesquisadores": 10,
+     "matches": 10
+    },
+    "17": {
+     "pesquisadores": 10,
+     "matches": 10
+    },
+    "6": {
+     "pesquisadores": 2,
+     "matches": 2
+    }
+   }
+  },
+  "Universidade de Aveiro": {
+   "pais": "Portugal",
+   "n_pesquisadores": 186,
+   "ods": {
+    "15": {
+     "pesquisadores": 38,
+     "matches": 57
+    },
+    "13": {
+     "pesquisadores": 17,
+     "matches": 17
+    },
+    "3": {
+     "pesquisadores": 39,
+     "matches": 45
+    },
+    "4": {
+     "pesquisadores": 60,
+     "matches": 79
+    },
+    "9": {
+     "pesquisadores": 56,
+     "matches": 60
+    },
+    "5": {
+     "pesquisadores": 7,
+     "matches": 7
+    },
+    "10": {
+     "pesquisadores": 1,
+     "matches": 1
+    },
+    "12": {
+     "pesquisadores": 10,
+     "matches": 10
+    },
+    "17": {
+     "pesquisadores": 33,
+     "matches": 36
+    },
+    "11": {
+     "pesquisadores": 13,
+     "matches": 13
+    },
+    "6": {
+     "pesquisadores": 15,
+     "matches": 55
+    }
+   }
   }
  },
  "openalex": {
-  "gerado_em": "2026-11-03",
+  "gerado_em": "2026-11-04",
   "from_year": 2021,
   "limiar_score_ods": 0.4,
   "instituicoes": {
