@@ -751,3 +751,63 @@ h1, h2, h3 { color: var(--ink-primary); margin: 0; font-weight: 700; letter-spac
 .ods-tile.is-empty:hover { opacity: 0.8; }
 .ods-panel__link { text-decoration: none; }
 .ods-panel__link:hover { color: var(--ink-primary); text-decoration: underline; }
+
+/* ==========================================================================
+   Metodologia — botão (i) por painel + janela (js/metodologia.js)
+   ========================================================================== */
+.panel__header:has(.met-info) .panel__hint { margin-left: auto; }
+.met-info {
+  flex: 0 0 auto; align-self: center;
+  width: 18px; height: 18px; margin-left: 8px; padding: 0;
+  border-radius: 50%; border: 1px solid var(--border-strong);
+  background: var(--surface-panel); color: var(--accent-strong);
+  font: italic 700 11px/16px Georgia, "Times New Roman", serif;
+  cursor: pointer; text-align: center;
+  transition: background var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
+}
+.met-info:hover, .met-info:focus-visible { background: var(--accent); color: var(--ink-on-accent); border-color: var(--accent); transform: scale(1.08); outline: none; }
+.met-info--float { position: absolute; top: 10px; right: 10px; z-index: 5; margin: 0; }
+
+body.met-lock { overflow: hidden; }
+.met-modal { position: fixed; inset: 0; z-index: 2000; display: none; align-items: center; justify-content: center; padding: 16px; }
+.met-modal.is-open { display: flex; }
+.met-modal__backdrop { position: absolute; inset: 0; background: rgba(6, 30, 21, 0.45); backdrop-filter: blur(2px); }
+.met-modal__card {
+  position: relative; width: min(760px, 100%); max-height: min(86vh, 900px);
+  display: flex; flex-direction: column;
+  background: var(--surface-panel); color: var(--ink-secondary);
+  border: 1px solid var(--border-strong); border-top: 3px solid var(--accent);
+  border-radius: var(--radius-md); box-shadow: var(--shadow-lift);
+  animation: met-in var(--dur-mid) var(--ease);
+}
+@keyframes met-in { from { opacity: 0; transform: translateY(8px) scale(0.985); } to { opacity: 1; transform: none; } }
+.met-modal__head {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 14px 18px; border-bottom: 1px solid var(--border-hairline);
+}
+.met-modal__head h2 { margin: 0; font-size: 14px; font-weight: 700; color: var(--ink-primary); text-transform: uppercase; letter-spacing: 0.05em; }
+.met-modal__actions { display: flex; gap: 8px; flex: 0 0 auto; }
+.met-btn {
+  font: 600 12px var(--font); color: var(--accent-strong); background: var(--accent-wash);
+  border: 1px solid var(--border-strong); border-radius: var(--radius-pill); padding: 6px 12px; cursor: pointer;
+}
+.met-btn:hover { background: var(--accent); color: var(--ink-on-accent); }
+.met-btn--icon { padding: 6px 10px; }
+.met-modal__body { overflow-y: auto; padding: 6px 18px 18px; font-size: 13px; line-height: 1.6; }
+.met-modal__body h3 { margin: 18px 0 6px; font-size: 11px; font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase; color: var(--accent-strong); }
+.met-modal__body h4 { margin: 14px 0 4px; font-size: 13px; font-weight: 700; color: var(--ink-primary); }
+.met-modal__body p { margin: 0 0 8px; text-align: justify; hyphens: auto; }
+.met-extra { padding: 8px 12px; background: var(--surface-alt); border-left: 3px solid var(--accent); border-radius: 6px; }
+.met-params { width: 100%; border-collapse: collapse; font-size: 12px; }
+.met-params th, .met-params td { padding: 6px 8px; border-bottom: 1px solid var(--border-hairline); vertical-align: top; text-align: left; }
+.met-params th { width: 38%; font-weight: 600; color: var(--ink-primary); }
+.met-code {
+  margin: 0 0 8px; padding: 10px 12px; overflow-x: auto; white-space: pre;
+  background: var(--surface-alt); border: 1px solid var(--border-hairline); border-radius: 8px;
+  font: 11.5px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--ink-primary);
+}
+.met-note { font-size: 11.5px; color: var(--ink-muted); }
+@media (max-width: 560px) {
+  .met-params th { width: 45%; }
+  .met-modal__head h2 { font-size: 12px; }
+}

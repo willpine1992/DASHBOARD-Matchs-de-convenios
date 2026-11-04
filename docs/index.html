@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <script>(function(){var t=localStorage.getItem('faap-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);})();</script>
 <title>ACADEMIC PARTNER FOUND - APF · Convênios · Painel</title>
-<link rel="stylesheet" href="css/style.css?v=29" />
+<link rel="stylesheet" href="css/style.css?v=30" />
 </head>
 <body>
 
@@ -40,14 +40,14 @@
   <!-- ===================== Coluna 1 — filtros ===================== -->
   <section class="col col--left">
 
-    <div class="panel" data-help="Filtra pelo Programa de Pós-Graduação (PPG) da UEA. Selecionar um PPG agrupa todos os professores vinculados a ele e mostra só as linhas de pesquisa oficiais desse PPG. O número à direita de cada item é o conceito CAPES do PPG na Avaliação Quadrienal 2021-2024.">
+    <div class="panel" data-method="ppg" data-help="Filtra pelo Programa de Pós-Graduação (PPG) da UEA. Selecionar um PPG agrupa todos os professores vinculados a ele e mostra só as linhas de pesquisa oficiais desse PPG. O número à direita de cada item é o conceito CAPES do PPG na Avaliação Quadrienal 2021-2024.">
       <div class="panel__header">
         <span class="panel__title">Programas (PPG)</span>
         <span class="panel__hint" id="ppg-count-hint"></span>
       </div>
       <div class="checklist" id="filter-ppg-list"></div>
 
-      <div class="capes-filters" data-help="Filtra os PPGs (e, por consequência, os professores) pelos atributos cadastrados na Avaliação Quadrienal CAPES 2021-2024: nível do curso, modalidade, situação e conceito obtido.">
+      <div class="capes-filters" data-method="capes-filtros" data-method-title="Filtros CAPES" data-help="Filtra os PPGs (e, por consequência, os professores) pelos atributos cadastrados na Avaliação Quadrienal CAPES 2021-2024: nível do curso, modalidade, situação e conceito obtido.">
         <div class="field">
           <label>Nível</label>
           <select id="filter-nivel" class="dropdown">
@@ -75,7 +75,7 @@
       </div>
     </div>
 
-    <div class="panel panel--grow" style="height:440px;" data-help="Lista as linhas de pesquisa OFICIAIS (nome + descrição do PPG) do(s) PPG(s) selecionado(s) — ou de todos, se nenhum PPG estiver selecionado. Clique numa linha para filtrar o painel só por ela — o número ao lado é quantas conexões internacionais aquela linha tem.">
+    <div class="panel panel--grow" style="height:440px;" data-method="linhas" data-help="Lista as linhas de pesquisa OFICIAIS (nome + descrição do PPG) do(s) PPG(s) selecionado(s) — ou de todos, se nenhum PPG estiver selecionado. Clique numa linha para filtrar o painel só por ela — o número ao lado é quantas conexões internacionais aquela linha tem.">
       <div class="panel__header">
         <span class="panel__title">Linhas de pesquisa</span>
         <span class="panel__hint">clique p/ filtrar</span>
@@ -85,7 +85,7 @@
       </div>
     </div>
 
-    <div class="panel panel--grow" style="height:440px;" data-help="Lista todos os docentes da UEA do(s) PPG(s) selecionado(s) — ou de todos, se nenhum PPG estiver selecionado. Busque pelo nome; o ícone de ORCID (quando disponível) leva ao perfil público do docente. Clique no nome pra abrir o perfil dele no dashboard.">
+    <div class="panel panel--grow" style="height:440px;" data-method="docentes" data-help="Lista todos os docentes da UEA do(s) PPG(s) selecionado(s) — ou de todos, se nenhum PPG estiver selecionado. Busque pelo nome; o ícone de ORCID (quando disponível) leva ao perfil público do docente. Clique no nome pra abrir o perfil dele no dashboard.">
       <div class="panel__header">
         <span class="panel__title">Docentes UEA</span>
         <span class="panel__hint" id="prof-count-hint"></span>
@@ -103,7 +103,7 @@
 
   <!-- ===================== Coluna 2 — Sankey ===================== -->
   <section class="col col--center">
-    <div class="panel panel--grow" data-help="Diagrama de fluxo (Sankey): liga a linha de pesquisa oficial do PPG à instituição conveniada onde foi encontrado um pesquisador com trabalho semanticamente parecido. A espessura de cada faixa é proporcional ao número de conexões; passe o mouse sobre uma faixa para ver o valor exato.">
+    <div class="panel panel--grow" data-method="sankey" data-help="Diagrama de fluxo (Sankey): liga a linha de pesquisa oficial do PPG à instituição conveniada onde foi encontrado um pesquisador com trabalho semanticamente parecido. A espessura de cada faixa é proporcional ao número de conexões; passe o mouse sobre uma faixa para ver o valor exato.">
       <div class="panel__header">
         <span class="panel__title">Linha de pesquisa × Instituição conveniada</span>
         <span class="panel__hint" id="sankey-hint"></span>
@@ -111,7 +111,7 @@
       <div class="panel__body" id="sankey-chart"></div>
     </div>
 
-    <div class="panel" id="sbert-card" data-help="Mede, de 0 a 1, o quão parecido é o significado entre o nome+descrição da linha de pesquisa do PPG e o trabalho do pesquisador da conveniada, usando um modelo de linguagem (SBERT). Passe o mouse sobre uma faixa do Sankey acima para ver o valor de um par específico aqui.">
+    <div class="panel" id="sbert-card" data-method="sbert" data-help="Mede, de 0 a 1, o quão parecido é o significado entre o nome+descrição da linha de pesquisa do PPG e o trabalho do pesquisador da conveniada, usando um modelo de linguagem (SBERT). Passe o mouse sobre uma faixa do Sankey acima para ver o valor de um par específico aqui.">
       <div class="panel__header">
         <span class="panel__title">Similaridade semântica (SBERT)</span>
         <span class="panel__hint" id="sbert-hint"></span>
@@ -142,7 +142,7 @@
   <!-- ===================== Coluna 3 — visão geral ===================== -->
   <section class="col col--right">
 
-    <div class="panel" data-help="Filtra as conexões pelo país de destino da instituição conveniada.">
+    <div class="panel" data-method="pais-filtro" data-help="Filtra as conexões pelo país de destino da instituição conveniada.">
       <div class="panel__header"><span class="panel__title">País</span></div>
       <div class="field">
         <select id="filter-pais" class="dropdown">
@@ -151,12 +151,12 @@
       </div>
     </div>
 
-    <div class="panel" style="height:320px; display:flex; flex-direction:column;" data-help="Mapa de calor: quanto mais escura a cor de um país, mais conexões (matches) a UEA tem com instituições localizadas lá, considerando os filtros ativos. Passe o mouse sobre um país para ver o número exato.">
+    <div class="panel" style="height:320px; display:flex; flex-direction:column;" data-method="mapa" data-help="Mapa de calor: quanto mais escura a cor de um país, mais conexões (matches) a UEA tem com instituições localizadas lá, considerando os filtros ativos. Passe o mouse sobre um país para ver o número exato.">
       <div class="panel__header"><span class="panel__title">País da conveniada</span></div>
       <div class="panel__body" id="map-chart" style="flex:1; min-height:0;"></div>
     </div>
 
-    <div class="panel" id="ods-panel" data-help="ODS da ONU ligados às linhas de pesquisa da UEA que têm conexões com pesquisadores das conveniadas, considerando os filtros ativos. O número em cada quadro é a quantidade de pesquisadores das conveniadas distintos com conexão a linhas classificadas naquele ODS. Escolha uma universidade para ver só as conexões dela; clique num ODS para abrir a página ODS.">
+    <div class="panel" id="ods-panel" data-method="ods-mini" data-help="ODS da ONU ligados às linhas de pesquisa da UEA que têm conexões com pesquisadores das conveniadas, considerando os filtros ativos. O número em cada quadro é a quantidade de pesquisadores das conveniadas distintos com conexão a linhas classificadas naquele ODS. Escolha uma universidade para ver só as conexões dela; clique num ODS para abrir a página ODS.">
       <div class="panel__header">
         <span class="panel__title">ODS</span>
         <a class="panel__hint ods-panel__link" href="ods.html" id="ods-panel-link">ver página ODS →</a>
@@ -170,7 +170,7 @@
       <div class="ods-grid ods-grid--mini" id="ods-mini-grid" role="group" aria-label="ODS com conexões"></div>
     </div>
 
-    <div class="panel panel--grow" style="height:500px;" data-help="Ranking dos pesquisadores das conveniadas com mais conexões (matches) com professores da UEA, considerando os filtros ativos. Clique num nome para abrir o perfil completo daquele pesquisador.">
+    <div class="panel panel--grow" style="height:500px;" data-method="ranking" data-help="Ranking dos pesquisadores das conveniadas com mais conexões (matches) com professores da UEA, considerando os filtros ativos. Clique num nome para abrir o perfil completo daquele pesquisador.">
       <div class="panel__header">
         <span class="panel__title">Pesquisadores das conveniadas</span>
         <span class="panel__hint">por conexões</span>
@@ -188,6 +188,7 @@
 <script src="lib/d3-sankey.min.js"></script>
 <script src="lib/topojson-client.min.js"></script>
 <script src="js/common.js?v=27"></script>
+<script src="js/metodologia.js?v=1"></script>
 <script src="js/charts.js?v=27"></script>
 <script src="js/report.js?v=30"></script>
 <script src="js/page1.js?v=30"></script>

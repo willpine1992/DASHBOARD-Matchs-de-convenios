@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <script>(function(){var t=localStorage.getItem('faap-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);})();</script>
 <title>ACADEMIC PARTNER FOUND - APF · Convênios · Perfil do Docente UEA</title>
-<link rel="stylesheet" href="css/style.css?v=29" />
+<link rel="stylesheet" href="css/style.css?v=30" />
 </head>
 <body>
 
@@ -39,7 +39,7 @@
   <!-- ===================== Coluna 1 — Pessoal ===================== -->
   <section class="col col--left">
 
-    <div class="panel" data-help="Dados básicos do docente da UEA: nome, PPG(s) e distintivos que resumem o perfil dele.">
+    <div class="panel" data-method="doc-perfil" data-method-title="Perfil do docente UEA" data-help="Dados básicos do docente da UEA: nome, PPG(s) e distintivos que resumem o perfil dele.">
       <div class="profile-head">
         <div class="avatar" id="p-avatar">--</div>
         <div>
@@ -50,12 +50,12 @@
       <div class="badge-row" id="p-badges"></div>
     </div>
 
-    <div class="panel" data-help="Informações de contato disponíveis para este docente, quando existentes.">
+    <div class="panel" data-method="doc-contato" data-help="Informações de contato disponíveis para este docente, quando existentes.">
       <div class="panel__header"><span class="panel__title">Contato</span></div>
       <div id="p-contact"></div>
     </div>
 
-    <div class="panel panel--grow" data-help="Linhas de pesquisa oficiais do(s) PPG(s) deste docente.">
+    <div class="panel panel--grow" data-method="doc-linhas" data-help="Linhas de pesquisa oficiais do(s) PPG(s) deste docente.">
       <div class="panel__header">
         <span class="panel__title">Linhas de pesquisa do PPG</span>
         <span class="panel__hint" id="p-linhas-hint"></span>
@@ -65,7 +65,7 @@
       </div>
     </div>
 
-    <div class="panel panel--grow" data-help="Pesquisadores das conveniadas conectados às linhas de pesquisa do(s) PPG(s) deste docente. A barra ao lado do nome (calculada aos poucos, para os 8 primeiros) mostra o grau de afinidade semântica entre a publicação mais recente deste docente e as publicações daquele pesquisador, via busca semântica do OpenAlex — quanto maior, mais parecido. Clique num nome para abrir o perfil completo dele.">
+    <div class="panel panel--grow" data-method="doc-pesq" data-help="Pesquisadores das conveniadas conectados às linhas de pesquisa do(s) PPG(s) deste docente. A barra ao lado do nome (calculada aos poucos, para os 8 primeiros) mostra o grau de afinidade semântica entre a publicação mais recente deste docente e as publicações daquele pesquisador, via busca semântica do OpenAlex — quanto maior, mais parecido. Clique num nome para abrir o perfil completo dele.">
       <div class="panel__header">
         <span class="panel__title">Pesquisadores das conveniadas conectados</span>
         <span class="panel__hint" id="p-profs-hint"></span>
@@ -80,12 +80,12 @@
   <!-- ===================== Coluna 2 — PPG(s) ===================== -->
   <section class="col col--center">
 
-    <div class="panel" data-help="Programa(s) de Pós-Graduação da UEA a que este docente está vinculado, com o conceito CAPES (Avaliação Quadrienal 2021-2024) de cada um.">
+    <div class="panel" data-method="doc-ppg" data-help="Programa(s) de Pós-Graduação da UEA a que este docente está vinculado, com o conceito CAPES (Avaliação Quadrienal 2021-2024) de cada um.">
       <div class="panel__header"><span class="panel__title">Programa(s) de Pós-Graduação</span></div>
       <div id="i-ppgs"></div>
     </div>
 
-    <div class="panel panel--grow" style="min-height:220px;" data-help="Localização da Universidade do Estado do Amazonas (Manaus).">
+    <div class="panel panel--grow" style="min-height:220px;" data-method="doc-mapa" data-help="Localização da Universidade do Estado do Amazonas (Manaus).">
       <div class="panel__header"><span class="panel__title">Localização</span></div>
       <div class="panel__body" id="institution-map"></div>
     </div>
@@ -95,7 +95,7 @@
   <!-- ===================== Coluna 3 — Publicações ===================== -->
   <section class="col col--right">
 
-    <div class="panel panel--grow" data-help="Publicações mais recentes deste docente, via ORCID/OpenAlex — só disponível quando o ORCID está cadastrado na planilha de docentes.">
+    <div class="panel panel--grow" data-method="doc-pubs" data-help="Publicações mais recentes deste docente, via ORCID/OpenAlex — só disponível quando o ORCID está cadastrado na planilha de docentes.">
       <div class="panel__header">
         <span class="panel__title">Publicações</span>
         <span class="panel__hint" id="pub-hint">via OpenAlex</span>
@@ -117,6 +117,7 @@
 <script src="lib/d3.v7.min.js"></script>
 <script src="lib/topojson-client.min.js"></script>
 <script src="js/common.js?v=27"></script>
+<script src="js/metodologia.js?v=1"></script>
 <script src="js/charts.js?v=27"></script>
 <script src="js/docente.js?v=27"></script>
 </body>

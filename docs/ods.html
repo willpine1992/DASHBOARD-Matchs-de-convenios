@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <script>(function(){var t=localStorage.getItem('faap-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);})();</script>
 <title>ACADEMIC PARTNER FOUND - APF · Convênios · ODS</title>
-<link rel="stylesheet" href="css/style.css?v=29" />
+<link rel="stylesheet" href="css/style.css?v=30" />
 </head>
 <body>
 
@@ -46,7 +46,7 @@
   </div>
 
   <div class="ods-top">
-    <section class="panel ods-grid-panel" data-help="Os 17 ODS em ordem. O número no canto de cada quadro é a quantidade de linhas de pesquisa da UEA classificadas naquele ODS. Clique para ver os detalhes.">
+    <section class="panel ods-grid-panel" data-method="ods-grid" data-method-title="Os 17 ODS" data-help="Os 17 ODS em ordem. O número no canto de cada quadro é a quantidade de linhas de pesquisa da UEA classificadas naquele ODS. Clique para ver os detalhes.">
       <div class="ods-grid" id="ods-grid" role="group" aria-label="Objetivos de Desenvolvimento Sustentável"></div>
     </section>
 
@@ -55,7 +55,7 @@
     </section>
   </div>
 
-  <section class="panel ods-matrix-panel" data-help="Quadro universidade × ODS: cada célula mostra quantos pesquisadores distintos da instituição tiveram match forte (score ≥ 0,50) com linhas da UEA classificadas no ODS. Com os dados do OpenAlex, também é possível ver a participação do ODS na produção da universidade e o índice de especialização. Clique no ícone de um ODS para destacá-lo.">
+  <section class="panel ods-matrix-panel" data-method="ods-matriz" data-help="Quadro universidade × ODS: cada célula mostra quantos pesquisadores distintos da instituição tiveram match forte (score ≥ 0,50) com linhas da UEA classificadas no ODS. Com os dados do OpenAlex, também é possível ver a participação do ODS na produção da universidade e o índice de especialização. Clique no ícone de um ODS para destacá-lo.">
     <div class="panel__header">
       <span class="panel__title">Universidade × ODS</span>
       <span class="ods-matrix__controls">
@@ -71,6 +71,7 @@
 <footer class="site-credit">Powered by William Pinheiro</footer>
 
 <script src="js/common.js?v=28"></script>
+<script src="js/metodologia.js?v=1"></script>
 <script src="js/ods.js?v=28"></script>
 </body>
 </html>
