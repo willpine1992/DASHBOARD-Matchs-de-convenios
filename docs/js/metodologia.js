@@ -16,6 +16,10 @@
 (function () {
   "use strict";
 
+  // Botão (i) OCULTO por enquanto. Para reativar em todas as páginas, troque
+  // para true (e suba o ?v= de metodologia.js nos HTML para furar o cache).
+  const MOSTRAR_BOTAO = false;
+
   /* ---------------- blocos de metodologia (reutilizáveis) ---------------- */
   const B = {
     fontesUEA: {
@@ -328,6 +332,7 @@
   }
 
   function instalar() {
+    if (!MOSTRAR_BOTAO) return;
     document.querySelectorAll("[data-method]").forEach((painel) => {
       if (painel.querySelector(":scope > .met-info, :scope > .panel__header > .met-info")) return;
       const btn = document.createElement("button");
