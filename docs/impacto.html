@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>(function(){var t=localStorage.getItem('faap-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);})();</script>
+<title>ACADEMIC PARTNER FOUND - APF · Convênios · Impactos</title>
+<link rel="stylesheet" href="css/style.css?v=33" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar__brand">
+    <img src="image/propespuea.svg" alt="PROPESP UEA" class="topbar__logo" />
+    <img src="image/logo_internacionalizacao.png" alt="Comissão de Internacionalização da Pós-Graduação" class="topbar__logo topbar__logo--intl" />
+    <div class="topbar__title">
+      <strong>ACADEMIC PARTNER FOUND - APF · CONVÊNIOS</strong>
+      <span>Monitoramento de impactos sociais</span>
+    </div>
+  </div>
+
+  <nav class="topbar__nav">
+    <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+    </button>
+    <button class="btn" id="btn-relatorio" type="button">Relatório de impactos</button>
+    <a href="index.html" class="topbar__link">Painel</a>
+    <a href="https://internacionalizacao-create.github.io/dasboard-covenios-uea/" class="topbar__link" title="Dashboard de gerenciamento de convênios da UEA">Gestão de Convênios</a>
+    <a href="ods.html" class="topbar__link">ODS</a>
+    <a href="impacto.html" class="topbar__link is-active">Impactos</a>
+    <a href="flowmap.html" class="topbar__link">Mapa de Fluxo</a>
+  </nav>
+</header>
+
+<div class="statbar" id="topbar-stats"></div>
+
+<main class="imp-page">
+  <div class="imp-hero">
+    <h1>Os convênios da UEA estão gerando pesquisa em conjunto que chega à sociedade?</h1>
+    <p>Esta página acompanha o caminho completo: da coautoria com as universidades conveniadas aos temas da Agenda 2030, à produção fora dos periódicos e ao uso da pesquisa fora da academia. As respostas abaixo são recalculadas a cada filtro.</p>
+  </div>
+
+  <section class="panel imp-filtros" aria-label="Filtros">
+    <div class="field"><label for="f-pais">País</label><select id="f-pais" class="dropdown"></select></div>
+    <div class="field"><label for="f-parc">Conveniada</label><select id="f-parc" class="dropdown"></select></div>
+    <div class="field"><label for="f-prof">Professor</label><select id="f-prof" class="dropdown"></select></div>
+    <div class="field"><label for="f-ods">ODS</label><select id="f-ods" class="dropdown"></select></div>
+    <div class="field"><label for="f-periodo">Período</label>
+      <select id="f-periodo" class="dropdown">
+        <option value="">Toda a coautoria</option>
+        <option value="depois">Desde o início do convênio</option>
+        <option value="antes">Antes do convênio</option>
+      </select>
+    </div>
+    <label class="imp-check" data-help="Inclui UFAM e ITA. A UFAM sozinha soma cerca de 2.700 trabalhos e esconderia as demais conveniadas."><input type="checkbox" id="f-nacional" /> Conveniadas brasileiras</label>
+    <label class="imp-check" data-help="Inclui artigos com lista de autores cortada em 100 e sem autor da UEA visível, como os do experimento CMS/LHC. A participação existe, mas não pode ser atribuída ao convênio."><input type="checkbox" id="f-gigantes" /> Colaborações gigantes</label>
+    <button class="btn btn--ghost" id="f-limpar" type="button">Limpar</button>
+  </section>
+
+  <article class="imp-cap">
+    <header class="imp-cap__head">
+      <span class="imp-cap__num">Capítulo 1</span>
+      <h2>Os convênios geram coautoria?</h2>
+      <div class="imp-resposta" id="r1"></div>
+    </header>
+    <section class="panel">
+      <div class="panel__header">
+        <span class="panel__title">Coautorias por conveniada</span>
+        <span class="imp-legenda">
+          <span><i class="imp-swatch imp-swatch--antes"></i>Antes do convênio</span>
+          <span><i class="imp-swatch imp-swatch--depois"></i>Desde o convênio</span>
+        </span>
+      </div>
+      <div id="c1-barras"></div>
+      <div class="imp-nota" id="c1-zeradas"></div>
+    </section>
+    <p class="imp-porque"><b>Por que isso importa:</b> coautoria anterior ao acordo mostra uma relação que já existia. Só o que vem depois pode ser associado ao convênio, e mesmo assim sem provar causa.</p>
+  </article>
+
+  <article class="imp-cap">
+    <header class="imp-cap__head">
+      <span class="imp-cap__num">Capítulo 2</span>
+      <h2>Quais professores sustentam essas parcerias?</h2>
+      <div class="imp-resposta" id="r2"></div>
+    </header>
+    <section class="panel">
+      <div class="panel__header"><span class="panel__title">Professores com coautoria</span><span class="panel__hint">Clique em um nome para filtrar a página</span></div>
+      <div class="imp-tabela-wrap" id="c2-tabela"></div>
+    </section>
+    <p class="imp-porque"><b>Por que isso importa:</b> uma parceria apoiada em poucas pessoas é frágil. Saber quem a sustenta ajuda a planejar a continuidade dos acordos.</p>
+  </article>
+
+  <article class="imp-cap">
+    <header class="imp-cap__head">
+      <span class="imp-cap__num">Capítulo 3</span>
+      <h2>A quais ODS essa produção se relaciona?</h2>
+      <div class="imp-resposta" id="r3"></div>
+    </header>
+    <div class="imp-pilha">
+      <section class="panel">
+        <div class="panel__header"><span class="panel__title">ODS das coautorias</span><span class="panel__hint">Clique para filtrar</span></div>
+        <div id="c3-ods"></div>
+      </section>
+      <section class="panel">
+        <div class="panel__header"><span class="panel__title">Conveniada × ODS</span><span class="panel__hint">Número de trabalhos</span></div>
+        <div class="ods-matrix-scroll" id="c3-matriz"></div>
+      </section>
+    </div>
+    <section class="panel">
+      <div class="panel__header"><span class="panel__title">Publicações do recorte</span><span class="panel__hint" id="c3-conta"></span></div>
+      <div class="imp-tabela-wrap" id="c3-lista"></div>
+    </section>
+    <p class="imp-porque"><b>Por que isso importa:</b> ODS indica o tema do trabalho, não o efeito dele. Por isso esta página diz "relacionado a" e reserva a palavra impacto para o capítulo 5.</p>
+  </article>
+
+  <article class="imp-cap">
+    <header class="imp-cap__head">
+      <span class="imp-cap__num">Capítulo 4</span>
+      <h2>O que a UEA produz fora dos periódicos?</h2>
+      <div class="imp-resposta" id="r4"></div>
+    </header>
+    <section class="panel imp-escopo">
+      <div class="field"><label for="f-cinza">Recorte da literatura cinzenta</label>
+        <select id="f-cinza" class="dropdown">
+          <option value="ligada">Ligada às parcerias do recorte</option>
+          <option value="direta">Só com a conveniada citada no registro</option>
+          <option value="toda">Toda a produção da UEA</option>
+        </select>
+      </div>
+      <div class="field"><label for="f-cat">Tipo</label><select id="f-cat" class="dropdown"></select></div>
+      <div class="field imp-busca"><label for="f-busca">Buscar no título</label><input id="f-busca" class="dropdown" type="search" placeholder="ex.: água, saúde indígena" /></div>
+    </section>
+    <div class="imp-duas">
+      <section class="panel">
+        <div class="panel__header"><span class="panel__title">Por tipo de documento</span></div>
+        <div id="c4-cat"></div>
+      </section>
+      <section class="panel">
+        <div class="panel__header"><span class="panel__title">Por ODS</span><span class="panel__hint" id="c4-ods-nota"></span></div>
+        <div id="c4-ods"></div>
+      </section>
+    </div>
+    <section class="panel">
+      <div class="panel__header"><span class="panel__title">Registros</span><span class="panel__hint" id="c4-conta"></span></div>
+      <div class="imp-tabela-wrap" id="c4-lista"></div>
+    </section>
+    <p class="imp-porque"><b>Por que isso importa:</b> relatórios, teses e dados costumam chegar mais perto de gestores e comunidades do que artigos. Eles mostram o que foi produzido, mas ainda não quem usou.</p>
+  </article>
+
+  <article class="imp-cap">
+    <header class="imp-cap__head">
+      <span class="imp-cap__num">Capítulo 5</span>
+      <h2>Quem usou essa pesquisa fora da academia?</h2>
+      <div class="imp-resposta" id="r5"></div>
+    </header>
+    <section class="panel">
+      <div class="panel__header"><span class="panel__title">Relatórios que citam as coautorias</span><span class="panel__hint">Fonte: OpenAlex</span></div>
+      <div id="c5-citantes"></div>
+    </section>
+    <p class="imp-porque"><b>Por que isso importa:</b> esta é a única evidência direta de uso fora da academia na página. Como ela vem só de fontes abertas, que cobrem pouco as políticas públicas e a mídia, não encontrar citação aqui não significa ausência de impacto.</p>
+  </article>
+
+  <article class="imp-cap">
+    <header class="imp-cap__head">
+      <span class="imp-cap__num">Bastidores</span>
+      <h2>De onde vêm os números e qual a confiança neles?</h2>
+    </header>
+    <section class="panel">
+      <div class="panel__header"><span class="panel__title">Fontes de literatura cinzenta</span></div>
+      <div class="imp-tabela-wrap" id="b-fontes"></div>
+    </section>
+    <section class="panel imp-metodo" id="b-metodo"></div>
+  </article>
+</main>
+
+<footer class="site-credit">Powered by William Pinheiro</footer>
+
+<script src="js/common.js?v=28"></script>
+<script src="js/impacto_report.js?v=5"></script>
+<script src="js/impacto.js?v=5"></script>
+</body>
+</html>
