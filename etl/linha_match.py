@@ -45,7 +45,22 @@ RERANK_SCRIPT = DASHBOARDS_ROOT / "MATCHING" / "rerank.py"
 
 OPENALEX_URL = "https://api.openalex.org/works"
 CONTACT_EMAIL = "oticapinheiro.admin@gmail.com"
-API_KEY = "e20KHEj9oLRTjzBsp4QFI9"
+def _ler_chave(nome: str) -> str:
+    """Lê a chave de POSDOC - MAC/TOKENS/chaves.env, fora de qualquer repositório."""
+    import os
+    from pathlib import Path
+    if os.environ.get(nome):
+        return os.environ[nome]
+    for pasta in Path(__file__).resolve().parents:
+        arquivo = pasta / "TOKENS" / "chaves.env"
+        if arquivo.exists():
+            for linha in arquivo.read_text(encoding="utf-8").splitlines():
+                if linha.startswith(nome + "="):
+                    return linha.split("=", 1)[1].strip()
+    raise RuntimeError(f"Chave {nome} não encontrada em TOKENS/chaves.env")
+
+
+API_KEY = _ler_chave("OPENALEX_API_KEY")
 REQUEST_DELAY_S = 0.12
 RESULTS_PER_KEYWORD = 8
 YEARS_BACK = 5
